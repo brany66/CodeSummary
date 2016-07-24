@@ -4,29 +4,29 @@ Dynamic Programming
 <3>. 决策只取决于当前状态的特征因素，与到达当前状态的方式无关（无后效性）
 递推和记忆化搜索
 
-1. 装配线调度AssemblyLineScheduler
+1. 装配线调度  AssemblyLineScheduler
 2. MatrixChainMultiplication
 
-3. 最长公共子序列LCS
-4. 最长公共字符串LCStr
-5. 最长递增子序列LIS
-6. 最大子数组和(最大子序列)
+3. 最长公共子序列           LCS
+4. 最长公共字符串           LCStr
+5. 最长递增子序列           LIS
+6. 最大子数组和(最大子序列)  maxSubArrSum
 
-6-1. 捞鱼问题(对偶)
-7. 字符串编辑距离
+6-1. 捞鱼问题(对偶)         catchFish
+7. 字符串编辑距离           editDistance
 
-8. 硬币交换
-9. 最优二叉查找树
+8. 硬币交换                CoinChange
+9. 最优二叉查找树           OptimalBinarySearchTree
 
-10. Viterbi算法
+10. Viterbi算法            viterbi
 
-11. 0-1背包、完全背包
-12、数字三角形
+11. 0-1背包、完全背包       Bag01 BagComplete
+12、数字三角形              digitalTriangle
 
-13、交错和 (数位动态规划 ? )
+13、交错和 (数位动态规划 ? ) alternatingSum
 
-14、状态压缩一、二(?)
+14、状态压缩一、二(?)        stateCompression
 
-15、骨牌覆盖一、二、三
+15、骨牌覆盖一、二、三        dominoCover1(2,3)
 
 15、树形动态规划
