@@ -6,10 +6,12 @@ Dynamic Programming
 
 1. 装配线调度AssemblyLineScheduler
 2. MatrixChainMultiplication
+
 3. 最长公共子序列LCS
 4. 最长公共字符串LCStr
 5. 最长递增子序列LIS
 6. 最大子数组和(最大子序列)
+
 6-1. 捞鱼问题(对偶)
 7. 字符串编辑距离
 
@@ -17,9 +19,14 @@ Dynamic Programming
 9. 最优二叉查找树
 
 10. Viterbi算法
+
 11. 0-1背包、完全背包
 12、数字三角形
+
 13、交错和 (数位动态规划 ? )
+
 14、状态压缩一、二(?)
+
 15、骨牌覆盖一、二、三
+
 15、树形动态规划
