@@ -2,8 +2,10 @@
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/DP/dominoCover3.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/LinkedList/list.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/LinkedList/list.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/LinkedList/ClassicProblem.cpp" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
