@@ -234,7 +234,6 @@ int main()
 
 //    cout << "Reverse Kth Node " << getKthNode(head1, 2)->val << endl;
 //    cout << "Middle Node " << getMidNode(head1)->val << endl;
-
     int M;
     cin >> M;
     int *arr2 = new int[M];
