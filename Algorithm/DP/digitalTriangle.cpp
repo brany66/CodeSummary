@@ -1,6 +1,7 @@
 //
 // Created by BranY on 2016/7/23.
 // Contact at wyang@smail.nju.edu.cn
+// Copyright (c) 2016 NJU PASA Lab All rights reserved.
 // http://hihocoder.com/problemset/problem/1037
 /**
  * 小Ho选择的迷宫是一个被称为“数字三角形”的n(n不超过200)层迷宫，这个迷宫的第i层有i个房间，分别编号为1..i。

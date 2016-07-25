@@ -1,6 +1,7 @@
 //
 // Created by BranY on 2016/7/23.
 // Contact at wyang@smail.nju.edu.cn
+// Copyright (c) 2016 NJU PASA Lab All rights reserved.
 //
 /**
  * 它用于寻找最有可能产生观测事件序列的-维特比路径-隐含状态序列,特别是在马尔可夫信息源上下文和隐马尔可夫模型中。
