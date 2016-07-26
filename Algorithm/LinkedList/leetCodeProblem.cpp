@@ -7,6 +7,10 @@
 #include <iostream>
 #include <cstdlib>
 #include <sstream>
+#include <vector>
+#include <stack>
+#include <queue>
+
 using namespace std;
 struct ListNode {
     int val;
@@ -105,25 +109,125 @@ ListNode* removeNthFromEnd(ListNode* head, int n) {
     }
     return head;
 }
+/**
+ * https://leetcode.com/problems/merge-k-sorted-lists/
+ * @param lists Array of Sorted LinkedList
+ * @return merged List
+ */
+ListNode* MERGE(ListNode* l1, ListNode* l2) {
+    if (l1 == NULL) return l2;
+    if (l2 == NULL) return l1;
+    ListNode *res, *p;
+    res = p = (l1->val < l2->val) ? l1 : l2;
+    ListNode *q = (l1->val < l2->val) ? l2 : l1;
+    while (p != NULL && q != NULL) {
+        while (p->next != NULL && p->next->val <= q->next->val)
+            p = p->next;
+        ListNode *old = p->next;
+        p->next = q;
+        p = q;
+        q = old;
+    }
+    return res;
+}
+ListNode* helper(vector<ListNode*>& lists, int l, int r) {
+    if (l < r) {
+        int m = (l+r) / 2;
+        return MERGE(helper(lists, l, m), helper(lists, m+1, r));
+    }
+    return lists[l];
+}
+ListNode * mergeKLists(vector<ListNode*>& lists) {
+    if (lists.size() == 0) return NULL;
+    if (lists.size() == 1) return lists[0];
+    return helper(lists, 0, lists.size() - 1);
+}
+
+/**
+ * https://leetcode.com/problems/reverse-nodes-in-k-group/
+ * @return
+ */
+ListNode* reverseKGroup(ListNode* head, int k) {
+    if (head == NULL || head->next == NULL || k <= 1)
+        return head;
+    int len = 0;
+    ListNode *p = head;
+    while (p != NULL)
+    {
+        len++;
+        p = p->next;
+    }
+    if (k > len)
+        return head;
+    ListNode *q = head;
+    p = NULL;
+    int n = k;
+    while (q != NULL && n > 0)
+    {
+        ListNode *x = q->next;
+        q->next = p;
+        p = q;
+        q = x;
+        n--;
+    }
+    head->next = q;
+    if (len - k >= k)
+        head->next = reverseKGroup(q, k);
+    else
+        head->next = q;
+    return p;
+}
+/**
+ * https://leetcode.com/problems/odd-even-linked-list/
+ * @return
+ */
+ListNode* oddEvenList(ListNode* head) {
+    queue<ListNode*> ST;
+    if (head == NULL) return head;
+    ListNode fake(-1);
+    fake.next = head;
+    ListNode *prev = &fake;
+    ListNode *p = prev->next;
+    int i = 0;
+    while (p != NULL) {
+        if (i % 2 != 0) {
+            ListNode *tmp = p;
+            ST.push(tmp);
+            prev->next = tmp->next;
+            p = prev->next;
+        } else {
+            prev = p;
+            p = p->next;
+        }
+        ++i;
+    }
+    while(!ST.empty()) {
+        ListNode *tmp = ST.front();
+        tmp->next = NULL;
+        prev->next = tmp;
+        prev = tmp;
+        ST.pop();
+    }
+    return fake.next;
+}
 int main()
 {
-    int N1, N2;
-    cin >> N1 >> N2;
+    int N1;
+    cin >> N1;
     int *arr1 = new int[N1];
     for (int i = 0; i < N1; i++)
         cin >> arr1[i];
     ListNode *h1 = createLinkedListTail(arr1, N1);
     printLinkedList(h1);
 
-    int *arr2 = new int[N2];
-    for (int i = 0; i < N2; i++)
-        cin >> arr2[i];
-    ListNode *h2 = createLinkedListTail(arr2, N2);
-    printLinkedList(h2);
+    //printLinkedList(oddEvenList(h1));
+//    int K;
+//    cin >> K;
+//    printLinkedList(reverseKGroup(h1, K));
 
     //printLinkedList(addTwoNumbers(h1, h2));
 
-    printLinkedList(removeNthFromEnd(h1, 3));
-    printLinkedList(removeNthFromEnd(h2, 6));
+    //printLinkedList(removeNthFromEnd(h1, 3));
+    //printLinkedList(removeNthFromEnd(h2, 6));
     return 0;
 }
