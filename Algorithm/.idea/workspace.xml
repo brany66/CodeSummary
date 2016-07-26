@@ -11,9 +11,8 @@
     </ADDITIONAL_GENERATION_ENVIRONMENT>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="704979fe-71f4-4237-95ae-466217b08593" name="Default" comment="&quot;2016-7-26&quot;">
+    <list default="true" id="704979fe-71f4-4237-95ae-466217b08593" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LinkedList/leetCodeProblem.cpp" afterPath="$PROJECT_DIR$/LinkedList/leetCodeProblem.cpp" />
     </list>
     <ignored path="Algorithm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -386,7 +385,7 @@
       <updated>1469169112958</updated>
       <workItem from="1469342270493" duration="106000" />
       <workItem from="1469342473235" duration="21715000" />
-      <workItem from="1469425436233" duration="14208000" />
+      <workItem from="1469425436233" duration="14217000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;2016-7-24&quot;">
       <created>1469344832075</created>
@@ -423,11 +422,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469536204908</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="&quot;2016-7-26&quot;">
+      <created>1469544756065</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1469544756065</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36029000" />
+    <option name="totallyTimeSpent" value="36038000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
