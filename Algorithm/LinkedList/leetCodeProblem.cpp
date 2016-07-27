@@ -277,6 +277,38 @@ ListNode* insertionSortList(ListNode* head) {
     }
     return fake.next;
 }
+/**
+ * https://leetcode.com/problems/reorder-list/
+ * @param head
+ */
+void reorderList(ListNode* head) {
+    if (head == NULL || head->next == NULL) return;
+    ListNode *slow = head;
+    ListNode *fast = head;
+    while (fast->next != NULL && fast->next->next != NULL) {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    ListNode *mid = slow->next;
+    ListNode *last = mid;
+    ListNode *pre = NULL;
+    while (last != NULL) {
+        ListNode *tmp = last->next;
+        last->next = pre;
+        pre = last;
+        last = tmp;
+    }
+    slow->next = NULL;
+    //slow = head;
+    ListNode *p = head;
+    while (p != NULL && pre != NULL) {
+        ListNode *next = p->next;
+        p->next = pre;
+        pre = pre->next;
+        p->next->next = next;
+        p = next;
+    }
+}
 int main()
 {
     int N1;
@@ -287,7 +319,10 @@ int main()
     ListNode *h1 = createLinkedListTail(arr1, N1);
     printLinkedList(h1);
 
-    printLinkedList(insertionSortList(h1));
+    reorderList(h1);
+    printLinkedList(h1);
+    //cout << getMidNode(h1)->val << endl;
+    //printLinkedList(insertionSortList(h1));
 
 //    cout << getMidNode(h1)->val << endl;
 //

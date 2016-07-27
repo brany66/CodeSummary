@@ -32,6 +32,12 @@ struct ListNode {
         next = NULL;
     }
 };
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
 //1. 创建链表->头插法
 ListNode* createLinkedListHead(int *arr, int N) {
     ListNode *root, *p;
@@ -211,6 +217,27 @@ void deleteNode(ListNode* head, ListNode* toBeDeleted) {
             delete toBeDeleted;
         }
     }
+}
+TreeNode* sortedListToBST(ListNode* head) {
+    if (head == NULL) return NULL;
+    int size = 0;
+    ListNode *p = head;
+    ListNode *q = head;
+    while(p != NULL) {
+        size++;
+        p = p->next;
+    }
+
+    return convertSortListToBST(q, size);
+}
+TreeNode* convertSortListToBST(ListNode* &head, int size) {
+    if (size == 0) return NULL;
+    TreeNode *root = new TreeNode(0);
+    root->left = convertSortListToBST(head, size/2);
+    root->val = head->val;
+    head = head->next;
+    root->right = convertSortListToBST(head, size - size/2 - 1);
+    return root;
 }
 int main()
 {
