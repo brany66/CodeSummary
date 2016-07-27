@@ -210,6 +210,73 @@ ListNode* oddEvenList(ListNode* head) {
     }
     return fake.next;
 }
+/**
+ * 查找单链表的中间节点
+ * @param head
+ * @return
+ */
+ListNode* getMidNode(ListNode* head) {
+    if (head == NULL || head->next == NULL) return head;
+    ListNode fake(-1);
+    fake.next = head;
+    ListNode *p = &fake;
+    ListNode *prev = &fake;
+    while (p->next != NULL) {
+        p = p->next;
+        prev = prev->next;
+        if (p->next != NULL)
+            p = p->next;
+    }
+    //cout << prev->val << endl;
+    return prev;
+}
+ListNode *reverse(ListNode* head) {
+    if (head == NULL || head->next == NULL) return head;
+    ListNode fake(-1);
+    //fake.next = head;
+    ListNode *cur = head;
+    while (cur != NULL) {
+        ListNode *tmp = cur;
+        cur = cur->next;
+        tmp->next = fake.next;
+        fake.next = tmp;
+    }
+    return fake.next;
+}
+bool isPalindrome(ListNode* head) {
+    if (head == NULL|| head->next == NULL) return true;
+    ListNode *p = head;
+    ListNode *mid = reverse(getMidNode(p)->next);
+    p = head;
+    while (p != NULL && mid != NULL) {
+        if (p->val != mid->val)
+            return false;
+        p = p->next;
+        mid = mid->next;
+    }
+    return true;
+}
+/**
+ * https://leetcode.com/problems/insertion-sort-list/
+ * @param head
+ * @return
+ */
+ListNode* insertionSortList(ListNode* head) {
+    if (head == NULL || head->next == NULL) return head;
+    ListNode fake(-1);
+    ListNode *prev = &fake;
+    ListNode *cur = head;
+    while (cur != NULL) {
+        ListNode *next = cur->next;
+        prev = &fake;
+        while (prev->next != NULL && prev->next->val <= cur->val)
+            prev = prev->next;
+        cur->next = prev->next;
+        prev->next = cur;
+        cur = next;
+    }
+    return fake.next;
+}
 int main()
 {
     int N1;
@@ -220,6 +287,14 @@ int main()
     ListNode *h1 = createLinkedListTail(arr1, N1);
     printLinkedList(h1);
 
+    printLinkedList(insertionSortList(h1));
+
+//    cout << getMidNode(h1)->val << endl;
+//
+//    if (isPalindrome(h1))
+//        cout << "YES" << endl;
+//    else
+//        cout << "NO" << endl;
     //printLinkedList(oddEvenList(h1));
 //    int K;
 //    cin >> K;
