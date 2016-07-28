@@ -30,6 +30,7 @@ int largestRectangleArea(vector<int>& heights) {
     }
     return sum;
 }
+
 int main(){
     int N;
     while (cin >> N) {
