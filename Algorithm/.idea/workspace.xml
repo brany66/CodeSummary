@@ -11,13 +11,8 @@
     </ADDITIONAL_GENERATION_ENVIRONMENT>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="704979fe-71f4-4237-95ae-466217b08593" name="Default" comment="&quot;2016-7-26&quot;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BeautyOfProgramming/chess.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BeautyOfProgramming/fritterSorting.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Algorithm.iml" afterPath="$PROJECT_DIR$/.idea/Algorithm.iml" />
+    <list default="true" id="704979fe-71f4-4237-95ae-466217b08593" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="Algorithm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -440,7 +435,7 @@
       <updated>1469169112958</updated>
       <workItem from="1469342270493" duration="106000" />
       <workItem from="1469342473235" duration="21715000" />
-      <workItem from="1469425436233" duration="45292000" />
+      <workItem from="1469425436233" duration="45304000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;2016-7-24&quot;">
       <created>1469344832075</created>
@@ -512,11 +507,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469710977093</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="&quot;2016-7-29&quot;">
+      <created>1469783492805</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1469783492805</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67113000" />
+    <option name="totallyTimeSpent" value="67125000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -604,7 +606,8 @@
     <MESSAGE value="&quot;2016-7-24&quot;" />
     <MESSAGE value="&quot;2016-7-25&quot;" />
     <MESSAGE value="&quot;2016-7-26&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;2016-7-26&quot;" />
+    <MESSAGE value="&quot;2016-7-29&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;2016-7-29&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
