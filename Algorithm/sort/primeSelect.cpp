@@ -43,6 +43,7 @@ void select_2(vector<int>& prime, int N) {
         }
     }
 }
+
 int main()
 {
     return 0;

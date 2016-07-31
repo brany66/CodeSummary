@@ -7,6 +7,8 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <map>
+#include <unordered_map>
 
 using namespace std;
 //1 :判断奇偶 a&1 == 1 为奇数
@@ -65,9 +67,50 @@ int findNotRepeatNum(vector<int>& a, int times) {
     }
     return res;
 }
+uint32_t reverseBits(uint32_t n) {
+    uint32_t res = 0;
+    uint32_t A[32];
+    for (int i = 31; i>=0; i--)
+        A[31-i] = pow(2.0, i);
+    for (int j = 0; j< 32; j++) {
+        if (n & 1) {
+            res += A[j];
+        }
+        n >>= 1;
+    }
+    return res;
+}
+/**
+ * https://leetcode.com/problems/repeated-dna-sequences/
+ * Given s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
+ * Return:
+ * ["AAAAACCCCC", "CCCCCAAAAA"].
+ * @param s
+ * @return
+ */
+vector<string> findRepeatedDnaSequences(string s) {
+    unordered_map<int, int> m;
+    vector<string> res;
+    int t = 0, i = 0, ss = s.size();
+    while (i < ss) {
+        if (m[t = (t << 3 | s[i++]) & 0x3FFFFFFF]++ == 1)
+            res.push_back(s.substr(i-10, 10));
+    }
+    return res;
+}
+
 int main()
 {
     vector<int> test{1,2,3,1,4,3,5,4,1,2,3,2,4};
     cout << findNotRepeatNum(test, 3) << endl;
+//    int n;
+//    cin >> n;
+//    cout << reverseBits(n) << endl;
+
+    string testS = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT";
+    vector<string> res = findRepeatedDnaSequences(testS);
+    for (auto a : res)
+        cout << a << " ";
+    cout << endl;
     return 0;
 }
