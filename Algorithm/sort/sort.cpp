@@ -15,6 +15,11 @@ void swap(int &a, int &b) {
     a = b;
     b = tmp;
 }
+void Swap(vector<int>& a, int i, int j) {
+    int tmp = a[i];
+    a[i] = a[j];
+    a[j] = tmp;
+}
 void print(vector<int> a) {
     for (int i = 0; i < a.size(); i++)
         cout << a[i] << " ";
@@ -166,38 +171,134 @@ void countSort(vector<int>& a) {
 
 /**
  * 基数排序
+ * https://www.cs.usfca.edu/~galles/visualization/RadixSort.html
  * 基为：10
  * @return
  */
-int maxBit(vector<int>& a) {
-    int d = 1;
-    for(int i = 0; i < a.size(); i++) {
-        int c = 1;
-        int p = a[i];
-        while (p/10) {
-            p = p/10;
-            c++;
-        }
-        d = max(d, c);
-    }
-    return d;
-}
 void radixSort(vector<int>& a) {
     int i, n = a.size();
-    int d = maxBit(a);
+    int Max = 0;
+    for (i = 0; i < n; i++) {
+        Max = max(Max, a[i]);
+    }
     int r = 1;
-    vector<int> radix(10, 0);
-    for (i = 0; i < n; i++)  {
-        int k = a[i] / r;
-        radix[k % 10]++;
-    }
-    for (i = 1; i < 10; i++) radix[i] += radix[i-1];
+    int *ans = (int *)malloc(sizeof(int) * n);
+    while (r < Max) {
+        vector<int> radix(10, 0);
+        for (i = 0; i < n; i++)  {
+            int k = a[i] / r;
+            radix[k % 10]++;
+        }
+        for (i = 1; i < 10; i++) radix[i] += radix[i-1];
 
-    for (i = n-1; i>=0; i--) {
-        int p = a[i] / r;
-        int s = p % 10;
-
+        for (i = n-1; i >= 0; i--)  {
+            int k = a[i] / r;
+            ans[--radix[k % 10]] = a[i];
+        }
+        for (i = 0; i < n; i++) a[i] = ans[i];
+        r *= 10;
     }
+}
+/**
+ * 选择排序
+ */
+void selectSort(vector<int>& a) {
+    int i, j, minIndex;
+    for (i = 0; i < a.size(); i++) {
+        minIndex = i;
+        for (j = i + 1; j < a.size(); j++)
+            if (a[j] < a[minIndex])
+                minIndex = j;
+        swap(a[i], a[minIndex]);
+    }
+}
+/**
+ * shell Sort
+ */
+void shellSort(vector<int>& a) {
+    int j, gap;
+    for (gap = a.size() / 2; gap > 0; gap /= 2) {
+        for (j = gap; j < a.size(); j++) {
+            if (a[j] < a[j-gap]) {
+                int tmp = a[j];
+                int k = j - gap;
+                while (k >= 0 && a[k] > tmp) {
+                    a[k+gap] = a[k];
+                    k -= gap;
+                }
+                a[k+gap] = tmp;
+            }
+        }
+    }
+}
+/**
+ * 堆排序
+ * 1. 父节点的值 大于等于(或小于等于) 任何一个子节点的值
+ * 2. 每个节点的左子树和右子树都是一个二叉堆
+ * 3. 插入在底层，删除总是在根节点，从底层最右端选一个，然后恢复。
+ * @return
+ */
+
+void fitToHeap(vector<int>& a, int l, int r) {
+    int i = l;
+    int tmp = a[i];
+    int j = 2 * i + 1;
+    while (j < r) {
+        if (j+1 < r && a[j+1] > a[j]) j++;
+
+        if (a[j] <= tmp) break; //
+        a[i] = a[j];
+        i = j;
+        j = 2 * i + 1;
+    }
+    a[i] = tmp;
+}
+void heapSort(vector<int>& a) {
+    int n = a.size();
+    for (int j = n/2 - 1; j >= 0; j--)
+        fitToHeap(a, j, n);
+
+    for (int i = n - 1; i > 0; i--) {
+        int tmp = a[0];
+        a[0] = a[i];
+        a[i] = tmp;
+        fitToHeap(a, 0, i);
+    }
+}
+
+/**
+ * quick sort
+ * @return
+ */
+void quickSort(vector<int>& a, int l, int r) {
+    if (l < r) {
+        int i = l, j = r;
+        int pivot = a[i];
+
+        while (i < j) {
+            //right to left
+            while (i < j && a[j] >= pivot) j--;
+            if (i < j) {
+                a[i] = a[j];
+                i++;
+            }
+
+            //left to right
+            while (i < j && a[i] < pivot) i++;
+            if (i < j) {
+                a[j] = a[i];
+                j--;
+            }
+        }
+        a[j] = pivot;
+        quickSort(a, l, i - 1);
+        quickSort(a, i + 1, r);
+    }
+}
+void quickHelp(vector<int>& a) {
+    if (a.size() <= 1) return ;
+    int l = 0, r = a.size();
+    quickSort(a, l, r);
 }
 int main()
 {
@@ -214,8 +315,19 @@ int main()
 //    merge(num);
 //    print(num);
 
-    vector<int> arr = {99, 65, 24, 47, 50, 88,33, 66, 67, 31, 18};
-    bucket_sort(arr);
-    print(arr);
+//    vector<int> arr = {99, 65, 24, 47, 50, 88,33, 66, 67, 31, 18};
+//    bucket_sort(arr);
+//    print(arr);
+
+    vector<int> arr1 = {820, 631, 892, 841, 742, 251, 9, 642, 645, 896, 996,
+                        938, 80, 691, 8, 785, 393, 707, 124, 67, 116, 362, 84, 104, 39, 500, 608, 740, 543};
+    radixSort(arr1);
+    print(arr1);
+
+    vector<int> arr2 = {8, 13, 0, 3, 20, 16, 9, 7, 11, 5};
+   // heapSort(arr2);
+   // quickHelp(arr2);
+    shellSort(arr2);
+    print(arr2);
     return 0;
 }
