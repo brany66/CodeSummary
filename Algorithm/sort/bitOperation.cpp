@@ -9,7 +9,7 @@
 #include <algorithm>
 #include <map>
 #include <unordered_map>
-
+#include <set>
 using namespace std;
 //1 :判断奇偶 a&1 == 1 为奇数
 void swap(int &a, int &b) {
@@ -98,7 +98,79 @@ vector<string> findRepeatedDnaSequences(string s) {
     }
     return res;
 }
+vector<string> findRepeatedDnaSequences_2(string s) {
+    vector <string>  ans;
+    map <int,int> mp;
+    map <char,int> cur;
+    set<string> st;
+    cur['A'] = 0;
+    cur['T'] = 1;
+    cur['C'] = 2;
+    cur['G'] = 3;
+    if (s.length() < 10)
+        return ans;
 
+    int temp = 0;
+    for(int i = 0;i < 10;i++)
+    {
+        temp <<= 2;
+        temp |= cur[s[i]];
+        //cout << temp << endl;
+    }
+   // cout << temp << endl;
+    mp[temp]++;
+    for(int i = 10;i < s.length(); i++)
+    {
+        temp <<= 2;
+        temp |= cur[s[i]];
+        temp &= ~(0x300000);//去掉最高的2位
+        mp[temp]++;
+        if(mp[temp] >= 2)
+            st.insert(s.substr(i-9,10));
+    }
+    set<string>::iterator it;
+    for(it = st.begin(); it!= st.end(); it++)
+        ans.push_back(*it);
+
+    return ans;
+}
+/**
+ * 78:https://leetcode.com/problems/subsets/
+ * subsets
+ * @return
+ */
+void helper(vector<int>& nums, vector<int> tmp, int i , vector<vector<int>>& ans) {
+    if (i == nums.size()) {
+        ans.push_back(tmp);
+        return;
+    }
+    tmp.push_back(nums[i]);
+    helper(nums, tmp, i+1, ans);
+    tmp.erase(tmp.end() - 1);
+    helper(nums, tmp, i+1, ans);
+}
+vector<vector<int>> subsets(vector<int>& nums) {
+    vector<vector<int>> ans;
+    sort(nums.begin(), nums.end());
+    vector<int> tmp;
+    helper(nums, tmp, 0, ans);
+    return ans;
+}
+vector<vector<int>> subsets_2(vector<int>& nums) {
+    sort(nums.begin(), nums.end());
+    int n = pow(2, nums.size());
+    vector<vector<int>> ans(n, vector<int>());
+    for (int i = 0; i < nums.size(); i++)
+    {
+
+        for (int j = 0; j < n; j++)
+        {
+            if ((j >> i) & 1 == true)
+                ans[j].push_back(nums[i]);
+        }
+    }
+    return ans;
+}
 int main()
 {
     vector<int> test{1,2,3,1,4,3,5,4,1,2,3,2,4};
@@ -108,9 +180,21 @@ int main()
 //    cout << reverseBits(n) << endl;
 
     string testS = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT";
-    vector<string> res = findRepeatedDnaSequences(testS);
+    cout << "ATCG\n";
+    vector<string> res = findRepeatedDnaSequences_2(testS);
     for (auto a : res)
         cout << a << " ";
     cout << endl;
+
+    vector<int> list{1,2, 3};
+    vector<vector<int>> ans = subsets_2(list);
+    for(auto c : ans) {
+        cout << "[";
+        if (c.size() != 0) {
+            for(auto a: c)
+                cout << a << " ";
+        }
+        cout << "]" << endl;
+    }
     return 0;
 }

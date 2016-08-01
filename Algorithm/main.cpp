@@ -21,6 +21,7 @@ int main() {
 
     vector<int>::iterator it = x.begin();
     auto it1 = x.begin();
+
 //    const DWORD busy = 10;
 //    const DWORD int idle = busy;
 //    INT64 start = 0;
