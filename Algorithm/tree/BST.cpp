@@ -133,8 +133,7 @@ bool contains(BSTNode *root, const elemType &val) {
         return contains(root->left, val);
     else if (root->val < val)
         return contains(root->right, val);
-    else
-        return true;
+    else return true;
 }
 /**
  * 插入一个节点
@@ -156,7 +155,8 @@ void insertNode(BSTNode *&root, const elemType &val) {
  * 删除一个节点
  * 1. 删除的节点没有孩子节点
  * 2. 删除的节点只有一个孩子节点
- * 3. 删除的节点有两个孩子节点
+ * 3. 删除的节点有两个孩子节点：
+ *                         找到右子树上的最小值，并替换当前父节点的值，之后删除最小值节点
  * @param root
  * @param val
  */
@@ -167,7 +167,7 @@ void removeNode(BSTNode *&root, const elemType &val) {
     else if (root->val < val)
         removeNode(root->right, val);
     else if (root->left != NULL && root->right != NULL) {
-        //3
+        //3()
         root->val = findMin((root->right))->val;
         removeNode(root->right, root->val);
     } else if (root->left == NULL || root->right == NULL) {
@@ -176,7 +176,6 @@ void removeNode(BSTNode *&root, const elemType &val) {
         root = (root->left != NULL) ? root->left : root->right;
         delete tmp;
     } else if (root->left == NULL && root->right == NULL) {
-
         //1
         delete root;
         root = NULL;

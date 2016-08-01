@@ -236,6 +236,8 @@ int main()
     cout << "\npre Order not recursive " << endl;
     preOrder_NotRec(&root);
 
+    vector<elemType> num1;
+
     cout << "\nmid Order" << endl;
     midOrder(&root);
     cout << "\nmid Order not recursive" << endl;

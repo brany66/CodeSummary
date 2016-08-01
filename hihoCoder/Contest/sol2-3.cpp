@@ -41,7 +41,7 @@ int fun(int h, int x, int y, line l) {
         if (y <= l.p1.y)
             count += fun(h-1, right_x, right_y, l);
         else if (y >= l.p2.y)
-            count += fun(h-1, left_x,left_y, l);
+            count += fun(h-1, left_x, left_y, l);
         else
             count += fun(h-1, left_x, left_y, l) + fun(h-1, right_x, right_y, l);
     }
