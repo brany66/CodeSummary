@@ -100,9 +100,9 @@ void postOrder_NorRec(treeNode* T) {
             pre = cur;
         } else {
             if (cur->right != NULL)
-                st.push(cur->right);
-            if (cur->left != NULL)
                 st.push(cur->left);
+            if (cur->left != NULL)
+                st.push(cur->right);
         }
     }
 }

@@ -92,10 +92,6 @@ void scale(int c, vector<int>& tree) {
     for (int i =1; i < tree.size(); i++)
         tree[i] = tree[i]/c;
 }
-/**
- * 返回指定累积频率的索引
- * @return
- */
 
 int main()
 {
