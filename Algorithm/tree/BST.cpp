@@ -181,6 +181,27 @@ void removeNode(BSTNode *&root, const elemType &val) {
         root = NULL;
     }
 }
+BSTNode* convertLinkedList(BSTNode *root) {
+    BSTNode *pLast = NULL;
+    convertNode(root, &Plast);
+    BSTNode *pHead = pLast;
+    while (pHead != NULL && pHead->left != NULL)
+        pHead = pHead->left;
+    return pHead;
+}
+void convertNode(BSTNode *root, BSTNode **pLast) {
+    if (root == NULL) return;
+    BSTNode *cur = root;
+    if (cur->left != NULL)
+        convertNode(cur->left, pLast);
+    cur->left = *pLast;
+    if (*pLast != NULL) {
+        (*pLast)->right = cur;
+    }
+    *pLast = cur;
+    if (cur->right != NULL)
+        convertNode(cur->right, pLast);
+}
 int main()
 {
     vector<int> arr{9,15,16,17,20,23,21,40,66,56,88};

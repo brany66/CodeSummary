@@ -2,7 +2,8 @@
 #include <vector>
 #include <windef.h>
 #include <winbase.h>
-
+#include <hash_set>
+#include <set>
 using namespace std;
 
 int main() {
@@ -18,9 +19,9 @@ int main() {
     decltype(s1.size()) p = 0;
     string::size_type n;
     vector<int> x;
+    string s;
+    set<int> aaa;
 
-    vector<int>::iterator it = x.begin();
-    auto it1 = x.begin();
 
 //    const DWORD busy = 10;
 //    const DWORD int idle = busy;

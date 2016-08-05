@@ -164,7 +164,7 @@ int countNode(treeNode* root) {
  * 利用先序遍历串和中序遍历串构建二叉树
  * @return
  */
-void buildTree_1(string preOrder, string midOrder, treeNode* &root) {
+void buildTree_1(string midOrder, string preOrder, treeNode* &root) {
     string L, R, preL, preR;
     bool flag = false;
     for (int i = 0; i < midOrder.size(); i++) {
@@ -189,7 +189,7 @@ void buildTree_1(string preOrder, string midOrder, treeNode* &root) {
     if(R.size()) {
         root->right = (treeNode*)malloc(sizeof(treeNode));
         root->right = NULL;
-        buildTree_1(L, preL, root->right);
+        buildTree_1(R, preR, root->right);
     }
 }
 /**
@@ -216,12 +216,12 @@ void buildTree_2(string midOrder, string postOrder, treeNode *&root) {
     if (L.size()) {
         root->left = (treeNode*)malloc(sizeof(treeNode));
         root->left = NULL;
-        buildTree_1(L, postL, root->left);
+        buildTree_2(L, postL, root->left);
     }
     if (R.size()) {
         root->right =  (treeNode*)malloc(sizeof(treeNode));
         root->right = NULL;
-        buildTree_1(R, postR, root->right);
+        buildTree_2(R, postR, root->right);
     }
 }
 int main()
