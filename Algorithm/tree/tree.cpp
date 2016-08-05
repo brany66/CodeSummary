@@ -2,7 +2,7 @@
 // Created by BranY on 2016/7/31.
 // Contact at wyang@smail.nju.edu.cn
 // Copyright (c) 2016 NJU PASA Lab All rights reserved.
-//
+// http://blog.csdn.net/luckyxiaoqiang/article/details/7518888
 #include <iostream>
 #include <queue>
 #include <sstream>

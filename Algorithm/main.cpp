@@ -21,7 +21,9 @@ int main() {
     vector<int> x;
     string s;
     set<int> aaa;
-
+    std::auto_ptr<string> ps(new std::string(s));
+    std::shared_ptr<string> ps1(new string(s));
+    std::unique_ptr<string> ps2(new string(s));
 
 //    const DWORD busy = 10;
 //    const DWORD int idle = busy;
