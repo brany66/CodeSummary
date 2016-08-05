@@ -7,6 +7,7 @@
 #include <iostream>
 #include <vector>
 #include <cstdlib>
+//#pragma pack(4)
 
 using namespace std;
 typedef struct treeNode {
