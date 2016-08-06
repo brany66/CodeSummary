@@ -94,7 +94,7 @@ public :
     }
     int getSets(int n) {
         int count = 0;
-        for (int i = 1; i <=n ; i++) {
+        for (int i = 1; i <= n ; i++) {
             if (id[i] == i)
                 count++;
         }
@@ -107,7 +107,7 @@ public :
         for (int i = 0; i < m; i++) {
             int baseA = find(edge[i].a);
             int baseB = find(edge[i].b);
-            if (baseA != baseB)                        
+            if (baseA != baseB)  {
                 id[baseA] = baseB;
                 sum += edge[i].cost;
             }
