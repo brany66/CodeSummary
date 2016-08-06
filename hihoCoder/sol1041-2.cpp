@@ -10,9 +10,9 @@
 using namespace std;
 
 const int MAX_N = 101;
-vector<int> graAdj[MAX_N];//ÁÚ½Ó±í
+vector<int> graAdj[MAX_N];//é‚»æ¥è¡¨
 int go[MAX_N];
-int graMat[MAX_N][MAX_N];//¾ØÕó
+int graMat[MAX_N][MAX_N];//çŸ©é˜µ
 
 bitset<MAX_N> hasChild[MAX_N];
 
@@ -27,39 +27,39 @@ void init(int n) {
 
 void getChild(int u = 1, int par = -1)
 {
-    hasChild[u][u] = 1;	//×Ô¼ºÊÇ×Ô¼ºµÄº¢×Ó£¿°Ñ×Ô¼ºÒ²²¢½øº¢×Ó¼¯ºÏÖĞ¡£
+    hasChild[u][u] = 1;	//è‡ªå·±æ˜¯è‡ªå·±çš„å­©å­ï¼ŸæŠŠè‡ªå·±ä¹Ÿå¹¶è¿›å­©å­é›†åˆä¸­ã€‚
     for (int i = 0; i < (int)graAdj[u].size(); i++)
     {
         int v = graAdj[u][i];
-        if (v == par) continue;//·ÀÖ¹»ØÂ·£¬²»»Ø×ß¸¸Ç×½Úµã
+        if (v == par) continue;//é˜²æ­¢å›è·¯ï¼Œä¸å›èµ°çˆ¶äº²èŠ‚ç‚¹
         getChild(v, u);
-        hasChild[u] |= hasChild[v];//ÇÉÃîÀûÓÃbitset¼ÓËÙÅĞ¶ÏÒ»¸ö½ÚµãÓĞ¶àÉÙº¢×Ó
+        hasChild[u] |= hasChild[v];//å·§å¦™åˆ©ç”¨bitsetåŠ é€Ÿåˆ¤æ–­ä¸€ä¸ªèŠ‚ç‚¹æœ‰å¤šå°‘å­©å­
     }
 }
 
-//ÀûÓÃÈ«¾Ö±äÁ¿graMatºÍgraAdj
+//åˆ©ç”¨å…¨å±€å˜é‡graMatå’ŒgraAdj
 bool eliminateAll(int go[], int &id, int m, int u = 1, int par = -1)
 {
     if (id < m && go[id] == u) id++;
     if (id == m) return true;
 
-    while (id < m)//¹Ø¼üµã£¬¿ÉÒÔÑ­»·²éÕÒ×Ó½Úµã
+    while (id < m)//å…³é”®ç‚¹ï¼Œå¯ä»¥å¾ªç¯æŸ¥æ‰¾å­èŠ‚ç‚¹
     {
         int nexta = go[id];
         int curIndex = id;
         for (int i = 0; i < (int)graAdj[u].size(); i++)
         {
             int v = graAdj[u][i];
-            if (v == par) continue;//ÅÅ³ı¸¸½Úµã£¬·ÀÖ¹»ØÂ·
+            if (v == par) continue;//æ’é™¤çˆ¶èŠ‚ç‚¹ï¼Œé˜²æ­¢å›è·¯
 
             if (hasChild[v][nexta] && graMat[u][v])
             {
-                graMat[u][v] = 0;//¹Ø¼üµã£º²ğÇÅ£¬²»ÓÃÖØ¸´²éÕÒÂ·¾¶
+                graMat[u][v] = 0;//å…³é”®ç‚¹ï¼šæ‹†æ¡¥ï¼Œä¸ç”¨é‡å¤æŸ¥æ‰¾è·¯å¾„
                 if (eliminateAll(go, id, m, v, u)) return true;
             }
         }
-        //¹Ø¼üµã£º·ÀÖ¹ÎŞÏŞÑ­»·£¬Ã»ÓĞ´ğ°¸µÄÊ±ºòÍË³ö
-        if (id == curIndex) break;//Ã»ÓĞÕÒµ½Ò»¸ö¶ÔÓ¦µÄµãa[id]£¬·µ»ØÉÏÒ»²ã
+        //å…³é”®ç‚¹ï¼šé˜²æ­¢æ— é™å¾ªç¯ï¼Œæ²¡æœ‰ç­”æ¡ˆçš„æ—¶å€™é€€å‡º
+        if (id == curIndex) break;//æ²¡æœ‰æ‰¾åˆ°ä¸€ä¸ªå¯¹åº”çš„ç‚¹a[id]ï¼Œè¿”å›ä¸Šä¸€å±‚
     }
     return false;
 }
@@ -83,7 +83,7 @@ int main()
             cin >> m;
             for (int i = 0; i < m; i++)
             {
-               cin >> go[i];
+                cin >> go[i];
             }
             getChild();
             int id = 0;
