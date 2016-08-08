@@ -53,22 +53,24 @@ void midOrder(BSTNode* T) {
         midOrder(T->right);
     }
 }
-void midOrder_NorRec(BSTNode* T) {
+vector<int> midOrder_NorRec(BSTNode* T) {
     stack<BSTNode*> st;
+    vector<int> res;
     BSTNode *p = T;
     while (p != NULL || !st.empty()) {
         while (p != NULL) {
-            //cout << p->val << " ";
             st.push(p);
             p = p->left;
         }
         if (!st.empty()) {
             p = st.top();
-            cout << p->val << " ";
+            //cout << p->val << " ";
+            res.push_back(p->val);
             st.pop();
             p = p->right;
         }
     }
+    return res;
 }
 /**
  * 后序遍历
@@ -181,14 +183,6 @@ void removeNode(BSTNode *&root, const elemType &val) {
         root = NULL;
     }
 }
-BSTNode* convertLinkedList(BSTNode *root) {
-    BSTNode *pLast = NULL;
-    convertNode(root, &Plast);
-    BSTNode *pHead = pLast;
-    while (pHead != NULL && pHead->left != NULL)
-        pHead = pHead->left;
-    return pHead;
-}
 void convertNode(BSTNode *root, BSTNode **pLast) {
     if (root == NULL) return;
     BSTNode *cur = root;
@@ -202,6 +196,15 @@ void convertNode(BSTNode *root, BSTNode **pLast) {
     if (cur->right != NULL)
         convertNode(cur->right, pLast);
 }
+BSTNode* convertLinkedList(BSTNode *root) {
+    BSTNode *pLast = NULL;
+    convertNode(root, &pLast);
+    BSTNode *pHead = pLast;
+    while (pHead != NULL && pHead->left != NULL)
+        pHead = pHead->left;
+    return pHead;
+}
+
 int main()
 {
     vector<int> arr{9,15,16,17,20,23,21,40,66,56,88};
@@ -219,6 +222,11 @@ int main()
     insertNode(root, 22);
     cout << "middle Order" << endl;
     midOrder(root);
+    cout << "\nMiddle Order Not Recursive:\n";
+    vector<int> res = midOrder_NorRec(root);
+    for (auto c: res)
+        cout << c << " ";
+    cout << endl;
     cout << "\nMax " << findMax(root)->val << endl;
     cout << "Min "<< findMin(root)->val << endl;
 

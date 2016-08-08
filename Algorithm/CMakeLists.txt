@@ -3,5 +3,5 @@ project(Algorithm)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES Solution90.cpp)
+set(SOURCE_FILES Backtracking/sol10.cpp Backtracking/sol22.cpp)
 add_executable(Algorithm ${SOURCE_FILES})
