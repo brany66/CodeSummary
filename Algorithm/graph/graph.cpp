@@ -272,14 +272,13 @@ void TopologicalSort(Graph *graph) {
 
         cout << graph->vertexLabel[vertexNO];
         if(counter != graph->vertexes)
-            cout << " > ";
+            cout << " -> ";
         qVertex.pop();
         for (int i = 0; i < graph->vertexes; i++) {
             if(i == vertexNO)
                 continue;
 
-            if (GetIndegree(graph,i) != 0)
-            {
+            if (GetIndegree(graph,i) != 0) {
                 graph->AdjMat[vertexNO][i] = INT_MAX;//indegree--
                 if(GetIndegree(graph,i) == 0)
                     qVertex.push(i);
@@ -428,18 +427,19 @@ int main()
 
     //for Dijkstra(shortest path),Prim(minimum spanning tree)
     //0 indexed
-    AddEdge(graph,0,1,2);
-    AddEdge(graph,0,3,1);
+
+    AddEdge(graph,0,1,4);
+    AddEdge(graph,0,2,1);
+    AddEdge(graph,0,3,5);
     AddEdge(graph,1,3,3);
-    AddEdge(graph,1,4,10);
-    AddEdge(graph,2,0,4);
-    AddEdge(graph,2,5,5);
-    AddEdge(graph,3,2,2);
-    AddEdge(graph,3,4,2);
-    AddEdge(graph,3,5,8);
-    AddEdge(graph,3,6,4);
-    AddEdge(graph,4,6,6);
-    AddEdge(graph,6,5,1);
+    AddEdge(graph,1,4,1);
+    AddEdge(graph,2,5,7);
+    AddEdge(graph,3,2,9);
+    AddEdge(graph,3,5,1);
+    AddEdge(graph,3,6,11);
+    AddEdge(graph,4,3,2);
+    AddEdge(graph,4,6,1);
+    AddEdge(graph,6,5,6);
 
     PrintGraph(graph);
     BeginDFS(graph);
@@ -453,5 +453,6 @@ int main()
 
     TopologicalSort(graph);
     MakeEmpty(graph);
+
     return 0;
 }

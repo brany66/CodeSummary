@@ -45,14 +45,5 @@ int main() {
         cout << q.top().val << "  ";
         q.pop();
     }
-//    const DWORD busy = 10;
-//    const DWORD int idle = busy;
-//    INT64 start = 0;
-//    while (true) {
-//        DWORD start = GetTickCount();
-//        while ((GetTickCount() - start) <= busy) ;
-//
-//        Sleep(idle);
-//    }
     return 0;
 }
