@@ -54,6 +54,25 @@ vector<vector<string>> solveNQueens(int n) {
     dfs(res, tmp, 0, n);
     return res;
 }
+
+/* Solution 52 */
+void dfs_52(int &sum, vector<int> &tmp, int index, const int n) {
+    if (index == n) {
+        sum += 1;
+        return;
+    }
+    for (int i = 0; i < n; i++) {
+        tmp[index] = i;
+        if (check(index, tmp))  dfs_52(sum, tmp, index+1, n);
+    }
+}
+int totalNQueens(int n) {
+    int sum = 0;
+    vector<int> tmp(n, 0);
+    dfs_52(sum, tmp, 0, n);
+    return res[0];
+}
+
 int main() {
     vector<vector<string>> res = solveNQueens(4);
     for (auto list : res) {

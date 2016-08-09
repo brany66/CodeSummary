@@ -10,38 +10,26 @@
 #include <queue>
 
 using namespace std;
-void dfs(vector<vector<int>> &list, vector<int> &tmp, vector<int>& nums, int l) {
-    if (l == nums.size()) {
-        list.push_back(tmp);
+/* Solution78 */
+void helper(vector<int>& nums, vector<int> tmp, int i , vector<vector<int>>& ans) {
+    if (i == nums.size()) {
+        ans.push_back(tmp);
         return;
     }
-    tmp.push_back(nums[l]);
-    dfs(list, tmp, nums, l+1);
-    tmp.erase(tmp.end()-1);
-    dfs(list, tmp, nums, l+1);
+    tmp.push_back(nums[i]);
+    helper(nums, tmp, i+1, ans);
+    tmp.pop_back();
+    helper(nums, tmp, i+1, ans);
 }
-bool equals(vector<int> &a, vector<int> &b) {
-    if (a.size() != b.size())
-        return false;
-    int len = a.size();
-    for (int i = 0; i < len; i++)
-        if (a[i] != b[i]) return false;
-    return true;
+vector<vector<int>> subsets(vector<int>& nums) {
+    vector<vector<int>> ans;
+    sort(nums.begin(), nums.end());
+    vector<int> tmp;
+    helper(nums, tmp, 0, ans);
+    return ans;
 }
-void dfs_duplicate(vector<vector<int>> &list, vector<int> &tmp, vector<int>& nums, int l) {
-    if (l == nums.size()) {
-        int cnt = list.size();
-        for (int i = 0; i< cnt; ++i)
-            if (equals(list[i], tmp))
-                return;
-        list.push_back(tmp);
-        return;
-    }
-    tmp.push_back(nums[l]);
-    dfs_duplicate(list, tmp, nums, l+1);
-    tmp.erase(tmp.end()-1);
-    dfs_duplicate(list, tmp, nums, l+1);
-}
+
+/* Solution90 */
 void dfs_dup(vector<vector<int>> &list, vector<int> &tmp, vector<int>& nums, int l) {
     list.push_back(tmp);
     for (int i = l; i < nums.size(); i++) {
@@ -59,6 +47,7 @@ vector<vector<int>> subsetsWithDup(vector<int>& nums) {
     return list;
 }
 
+/* Solution 91 */
 int numDecodings(string s) {
     //if (s == NULL) return 0;
     if (s.size() <= 1) return s.size();
@@ -78,7 +67,7 @@ int numDecodings(string s) {
 
 int main()
 {
-    vector<int> test{1,2,2,3,3};
+    vector<int> test{1,2,2};
     vector<vector<int>> res = subsetsWithDup(test);
     for (auto list : res) {
         cout << "[";
@@ -89,7 +78,5 @@ int main()
         }
         cout << "]" << endl;
     }
-    string sss = "12";
-    cout << numDecodings(sss) << endl;
     return 0;
 }
