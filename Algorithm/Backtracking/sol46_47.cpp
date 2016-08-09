@@ -37,6 +37,7 @@ vector<vector<int>> permute(vector<int>& nums) {
     dfs_46(nums, res, tmp, 0);
     return res;
 }
+
 void dfs(const vector<int> &nums, vector<int> &tmp, vector<vector<int>> &res, int index, vector<bool> &used) {
     if (index == nums.size()) {
         res.push_back(tmp);

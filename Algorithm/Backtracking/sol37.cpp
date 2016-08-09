@@ -31,7 +31,9 @@ bool dfs(vector<vector<char>> &board, int i, int j) {
     if (i == 9) return true;
     if (board[i][j] == '.') {
         for(int k = 1; k <= 9; k++) {
-            board[i][j] = (char)(k + '0');
+            char c = '0';
+            c += k;
+            board[i][j] = c;
             if(isValid(board, i, j)) {
                 if(dfs(board, i, j+1))
                     return true;
@@ -43,12 +45,15 @@ bool dfs(vector<vector<char>> &board, int i, int j) {
     }
     return false;
 }
-void solveSudoku(vector<vector<char>>& board) {
+void solveSudoku(vector<vector<char>> &board) {
     if (board.size() != 9 || board[0].size() != 9) return;
     dfs(board, 0, 0);
 }
 int main()
 {
+    char c = '1';
+    c += 15;
+    cout << c << endl;
     vector<vector<char>> solve = {
             {'5','3','.','.','7','.','.','.','.'},
             {'6','.','.','1','9','5','.','.','.'},

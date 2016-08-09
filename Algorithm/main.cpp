@@ -45,7 +45,8 @@ int main() {
         cout << q.top().val << "  ";
         q.pop();
     }
-
+    string str;
+    auto c = str.begin();
     //cout << stoi("123") << " " << iots(123) << endl;
     return 0;
 }
