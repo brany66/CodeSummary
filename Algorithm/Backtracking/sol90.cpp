@@ -58,6 +58,7 @@ vector<vector<int>> subsetsWithDup(vector<int>& nums) {
     dfs_dup(list, tmp, nums, 0);
     return list;
 }
+
 int numDecodings(string s) {
     //if (s == NULL) return 0;
     if (s.size() <= 1) return s.size();
