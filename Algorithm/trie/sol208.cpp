@@ -5,6 +5,7 @@
 // https://leetcode.com/problems/implement-trie-prefix-tree/
 
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 class TrieNode {
@@ -58,6 +59,7 @@ private:
     TrieNode *root;
 };
 int main() {
+    cout << int('a') << endl;
     return 0;
 }
 
