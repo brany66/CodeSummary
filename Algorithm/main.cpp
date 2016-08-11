@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include <queue>
 #include <set>
 using namespace std;
@@ -15,6 +16,16 @@ public :
         return a < b;
     }
 };
+/**
+ * 消除重复的单词
+ * @return
+ */
+void eliminateDuplicates(vector<string> &words) {
+    sort(words.begin(), words.end());
+    auto end_unique = unique(words.begin(), words.end());
+
+    words.erase(end_unique, words.end());
+}
 int main() {
     cout << "Hello, World!" << endl;
     unsigned  u = 10;
@@ -46,7 +57,22 @@ int main() {
         q.pop();
     }
     string str;
-    auto c = str.begin();
+    //auto c = str.begin();
     //cout << stoi("123") << " " << iots(123) << endl;
+    vector<int> vec;
+    fill_n(back_inserter(vec), 10, 0);
+
+   // auto it = back_inserter(vec);
+   //*it = 42;
+
+    int a1[] = {0,1,2,3,4,5,6,7,8,9};
+    int a2[sizeof(a1)/sizeof(*a1)];
+    auto ret = copy(begin(a1), end(a1), a2);
+
+    vector<string> test={"a","a", "c", "d", "d"};
+    cout << endl;
+    eliminateDuplicates(test);
+    for (auto c: test)
+        cout << c << " ";
     return 0;
 }
