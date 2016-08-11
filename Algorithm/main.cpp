@@ -69,10 +69,15 @@ int main() {
     int a2[sizeof(a1)/sizeof(*a1)];
     auto ret = copy(begin(a1), end(a1), a2);
 
-    vector<string> test={"a","a", "c", "d", "d"};
+    vector<string> test={"fox","jumps", "over", "quick", "red", "red", "the", "slow", "the", "turtle"};
     cout << endl;
     eliminateDuplicates(test);
-    for (auto c: test)
-        cout << c << " ";
+//    for (auto c: test)
+//        cout << c << " ";
+    auto sz = 4;
+    auto wc = find_if(test.begin(), test.end(),
+    [sz](const string &s) {return s.size() >= sz ;});
+
+    for_each(wc, test.end(), [](const string &s) {cout << s <<  " ";});
     return 0;
 }
