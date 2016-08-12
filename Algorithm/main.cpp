@@ -26,6 +26,7 @@ void eliminateDuplicates(vector<string> &words) {
 
     words.erase(end_unique, words.end());
 }
+auto f = [] (const string &s) {cout << s << " " ;};
 int main() {
     cout << "Hello, World!" << endl;
     unsigned  u = 10;
@@ -78,6 +79,6 @@ int main() {
     auto wc = find_if(test.begin(), test.end(),
     [sz](const string &s) {return s.size() >= sz ;});
 
-    for_each(wc, test.end(), [](const string &s) {cout << s <<  " ";});
+    for_each(wc, test.end(), f);
     return 0;
 }
