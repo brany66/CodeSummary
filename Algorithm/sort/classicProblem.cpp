@@ -111,6 +111,7 @@ int findNotIn(vector<int>& a) {
 int main()
 {
     vector<int> test{2,4,1,5,7,6,1,9,0,2};
+    string str(10, ' ');
     cout << findRepeatOne_add(test) << endl;
     return 0;
 }

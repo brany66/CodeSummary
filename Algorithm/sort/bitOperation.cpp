@@ -44,7 +44,7 @@ void findTwoNotRepeat(vector<int>& a, int &PN1, int &PN2) {
     PN1 = 0;
     PN2 = 0;
     for (i = 0; i < n; i++) {
-        if ((a[i] >> j)&1 == 0)
+        if ((a[i] >> j)  &1 == 0)
             PN1 ^= a[i];
         else
             PN2 ^= a[i];
@@ -107,17 +107,17 @@ vector<string> findRepeatedDnaSequences_2(string s) {
     cur['T'] = 1;
     cur['C'] = 2;
     cur['G'] = 3;
-    if (s.length() < 10)
-        return ans;
+//    if (s.length() < 10)
+//        return ans;
 
     int temp = 0;
     for(int i = 0;i < 10;i++)
     {
         temp <<= 2;
         temp |= cur[s[i]];
-        //cout << temp << endl;
+//        cout << temp << endl;
     }
-   // cout << temp << endl;
+   //cout << temp << " ****** " << endl;
     mp[temp]++;
     for(int i = 10;i < s.length(); i++)
     {

@@ -258,7 +258,7 @@ void heapSort(vector<int>& a) {
     for (int j = n/2 - 1; j >= 0; j--)
         fitToHeap(a, j, n);
 
-    for (int i = n - 1; i > 0; i--) {
+    for (int i = n - 1; i >= 0; i--) {
         int tmp = a[0];
         a[0] = a[i];
         a[i] = tmp;
@@ -325,9 +325,9 @@ int main()
     print(arr1);
 
     vector<int> arr2 = {8, 13, 0, 3, 20, 16, 9, 7, 11, 5};
-   // heapSort(arr2);
+   heapSort(arr2);
    // quickHelp(arr2);
-    shellSort(arr2);
+    //shellSort(arr2);
     print(arr2);
     return 0;
 }
