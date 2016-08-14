@@ -7,6 +7,7 @@
 #include <queue>
 #include <sstream>
 #include <string>
+#include <algorithm>
 #include <cstdlib>
 #include <stack>
 
@@ -88,6 +89,7 @@ void postOrder(treeNode* T) {
 }
 void postOrder_NorRec(treeNode* T) {
     stack<treeNode*> st;
+
     treeNode *cur;
     treeNode *pre = NULL;
     st.push(T);
@@ -192,6 +194,22 @@ void buildTree_1(string midOrder, string preOrder, treeNode* &root) {
         buildTree_1(R, preR, root->right);
     }
 }
+
+typedef vector<int>::iterator Iter;
+treeNode *buildTreeRecur(Iter istart, Iter iend, Iter pstart, Iter pend){
+    if(istart == iend) return NULL;
+    int rootVal = *pstart;
+    Iter iter = find(istart, iend, rootVal);
+    treeNode *res = new treeNode(rootVal);
+
+    res->left = buildTreeRecur(istart, iter, pstart+1, pstart + 1 + (iter-istart));
+    res->right = buildTreeRecur(iter+1, iend, pstart+1+(iter-istart), pend);
+    return res;
+}
+treeNode *buildTree(vector<int> &preorder, vector<int> &inorder) {
+    return buildTreeRecur(inorder.begin(), inorder.end(), preorder.begin(), preorder.end());
+}
+
 /**
  * 利用中序遍历串和后序遍历串构建二叉树
  * @return

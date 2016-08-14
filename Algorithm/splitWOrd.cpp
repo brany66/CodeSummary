@@ -67,6 +67,6 @@ int main() {
     }
     map<string, int> map;
     pair<string, int> p("HW", 1);
-    
+
     return 0;
 }
