@@ -11,7 +11,11 @@ using namespace std;
  * 要求连续
  * Max Sub Array Sum
  */
-
+/**
+ * O(n^2)
+ * @param A
+ * @return
+ */
 int basicMethod(vector<int>& A) {
     int maxSum = INT_MIN;
     for (int i = 0; i < A.size(); i++) {
@@ -105,7 +109,7 @@ int maxSum_endToend(vector<int>& A) {
 }
 int main()
 {
-    vector<int> arr{1, -2, 3, 10, -4, 7, 2, 5}; //3, 10, -4, 7, 2
+    vector<int> arr{1, -2, 3, 10, -4, 7, 2, 5}; //3, 10, -4, 7, 2, 5
     vector<int> arr1{0, -2, 3, 5, -1, 2}; //9
     vector<int> arr2{-9, -2, -3, -5 , -3}; //-2
 

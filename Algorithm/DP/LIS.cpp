@@ -20,8 +20,7 @@ int dp[100];
  */
 int LIS(vector<int>& A) {
     int res = 0 , i;
-    for (i = 1; i < A.size(); i++)
-    {
+    for (i = 1; i < A.size(); i++) {
         dp[i] = 1;
         for (int j = 0; j < i; j++) {
             if (A[i] > A[j] && dp[i] < dp[j] + 1) {
@@ -62,9 +61,6 @@ int LIS_BS(vector<int>& A) {
             dp1[pos] = A[i];
         }
     }
-//    for (int i = 0; i < dp1.size(); i++)
-//        cout << dp1[i] << " ";
-//    cout << endl;
     return len;
 }
 int main()

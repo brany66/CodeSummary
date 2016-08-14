@@ -3,6 +3,8 @@
 #include <algorithm>
 #include <queue>
 #include <set>
+#include <ctime>
+
 using namespace std;
 struct node {
     int val;
@@ -58,6 +60,7 @@ int main() {
         q.pop();
     }
     string str;
+    str.substr(8);
     //auto c = str.begin();
     //cout << stoi("123") << " " << iots(123) << endl;
     vector<int> vec;
@@ -80,5 +83,33 @@ int main() {
     [sz](const string &s) {return s.size() >= sz ;});
 
     for_each(wc, test.end(), f);
+
+    int N;
+    while (cin >> N) {
+        srand(time(NULL));
+        int i = 0;
+        vector<int> arr;
+
+        while (i < N) {
+            int tmp = rand() % 1000 + 1;
+            arr.push_back(tmp);
+            i++;
+        }
+        sort(arr.begin(), arr.end());
+        cout << arr.size() << endl;
+        vector<int>::iterator it = arr.begin() + 1;
+        while (it != arr.end()) {
+            if (*it == *(it - 1))
+                it = arr.erase(it);
+            else
+                it++;
+        }
+        cout << arr.size() << endl;
+        for (auto c: arr) {
+            cout << c << " ";
+        }
+        cout << endl;
+    }
+    unordered_map<int, int> map;
     return 0;
 }
