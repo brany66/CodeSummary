@@ -118,6 +118,7 @@ void levelOrder(treeNode* T) {
     q.push(T);
     while (!q.empty()) {
         t = q.front();
+        q.
         if (t->left)
             q.push(t->left);
         if(t->right)
@@ -161,7 +162,15 @@ int countNode(treeNode* root) {
     else
         return countNode(root->left) + countNode(root->right) + 1;
 }
-
+/**
+ * 计算树的深度
+ * @param root
+ * @return
+ */
+int maxDepth(treeNode* root) {
+    if (!root) return 0;
+    return 1+max(maxDepth(root->left), maxDepth(root->right));
+}
 /**
  * 利用先序遍历串和中序遍历串构建二叉树
  * @return
