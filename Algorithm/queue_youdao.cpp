@@ -15,26 +15,23 @@ int main() {
     int n;
     while (cin >> n) {
         vector<int> arr(n, 0);
-        int i;
-        for (i = 0; i < n; i++) {
-            cin >> arr[i];
-        }
-        for (auto a: arr) {
+        int i ;
+        for (i = 0; i < n; i++) cin >> arr[i];
+
+        for (auto a : arr) {
             queue<int> que;
-            map<int, int> map;
             for (i = 0; i < a; i++) que.push(i);
-
-            i =  1;
+            i = 1;
+            map<int, int> map;
             while (!que.empty()) {
-                int x = que.front();
+                int k = que.front();
                 que.pop();
-                que.push(x);
-                x = que.front();
+                que.push(k);
+                k = que.front();
                 que.pop();
-                map[x] = i++;
+                map[k] = i++;
             }
-
-            for (i = 0;  i < a; i++) {
+            for (i = 0; i < a; i++) {
                 if (i > 0) cout << " ";
                 cout << map[i];
             }
