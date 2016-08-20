@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include <vector>
+#include <queue>
 
 using namespace std;
 void change(vector<int> &nums, int n) {
@@ -37,7 +38,7 @@ int main() {
             vector<int> arr(2*n, 0);
             int i;
             for (i = 0;  i < 2 * n; i++) cin >> arr[i];
-            //for (i = 0; i < k; i++) change(arr, n);
+            for (i = 0; i < k; i++) change(arr, n);
 
             for (i  = 0; i < 2 * n; i++) {
                 if (i > 0) cout << " ";
@@ -46,5 +47,10 @@ int main() {
             cout << endl;
         }
     }
+    string str;
+    vector<int> vec;
+    priority_queue<int, vector<int>, greater<int>> que;
+
+
     return 0;
 }
