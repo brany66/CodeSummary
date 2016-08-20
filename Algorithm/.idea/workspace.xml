@@ -13,7 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="704979fe-71f4-4237-95ae-466217b08593" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shuffle_youdao.cpp" afterPath="$PROJECT_DIR$/shuffle_youdao.cpp" />
     </list>
     <ignored path="Algorithm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -489,7 +488,7 @@
       <workItem from="1469425436233" duration="134000000" />
       <workItem from="1470380406777" duration="10463000" />
       <workItem from="1470465009306" duration="125200000" />
-      <workItem from="1471268021534" duration="28875000" />
+      <workItem from="1471268021534" duration="28884000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;2016-7-24&quot;">
       <created>1469344832075</created>
@@ -673,11 +672,18 @@
       <option name="project" value="LOCAL" />
       <updated>1471601604238</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="&quot;2016-8-15&quot;">
+      <created>1471677190543</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1471677190543</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="320359000" />
+    <option name="totallyTimeSpent" value="320368000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
