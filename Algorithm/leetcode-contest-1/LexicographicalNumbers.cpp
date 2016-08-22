@@ -8,48 +8,20 @@
 #include <vector>
 
 using namespace std;
-void help(vector<int> &nums, int n, int carry) {
-    nums.push_back(carry);
-    int cin = 10;
-    int k = carry * cin;
-    if (k > n) return;
-    while (k <= n) {
-        nums.push_back(k);
-        cin  *= 10;
-        k = carry * cin;
-    }
-    k /= 10;
-    while (k > 10) {
-        int cur = k;
-        int j = 1;
-        while (j < 10) {
-            cur += j;
-            if (cur <= n) nums.push_back(cur);
-            if (cur == n) break;
-            ++j;
-        }
-        if (nums.size() == n) break;
-        k /= 10;
-    }
-    while (k <=  n) {
-        int cur = k;
-        ++cur;
-        while (cur < (carry + 1) * cin) {
-            if (cur <= n) nums.push_back(cur);
-            if (cur == n) break;
-            ++cur;
-        }
-        if (cur >= n) break;
-        cin *= 10;
-        k = carry * cin;
-    }
-}
 vector<int> lexicalOrder(int n) {
     vector<int> res;
     if (n <= 0) return res;
-    for (int i = 1; i < 10; i++) {
-        help(res, n, i);
-        if (res.size() == n) break;
+    int count = 0, k = 1;
+    while (count < n) {
+        if (k > n) {
+            k /= 10;
+            while (k % 10 == 9) k /= 10;
+            k++;
+        } else {
+            res.push_back(k);
+            count++;
+            k *= 10;
+        }
     }
     return res;
 }
