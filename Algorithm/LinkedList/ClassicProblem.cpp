@@ -42,14 +42,15 @@ struct TreeNode {
 ListNode* createLinkedListHead(int *arr, int N) {
     ListNode *root, *p;
     int i;
-    root = (ListNode *)malloc(sizeof(ListNode));
-    root->next = NULL;
+    root = new ListNode(-1);
+    // root = (ListNode *)malloc(sizeof(ListNode));
+    // root->next = NULL;
     for (i = 0; i < N; i++) {
-            p = (ListNode *)malloc(sizeof(ListNode));
-            p->val = arr[i];
-
-            p->next = root->next;
-            root->next = p;
+        //p = (ListNode *)malloc(sizeof(ListNode));
+       // p->val = arr[i];
+        p = new ListNode(arr[i]);
+        p->next = root->next;
+        root->next = p;
     }
     return root;
 }
@@ -57,12 +58,13 @@ ListNode* createLinkedListHead(int *arr, int N) {
 ListNode* createLinkedListTail(const int* arr, int N) {
     ListNode *root, *r;
     int i;
-    root = (ListNode *)malloc(sizeof(ListNode));
+    root = new ListNode(-1);
+    //root = (ListNode *)malloc(sizeof(ListNode));
     r = root;
     for (i = 0; i < N; i++) {
-
-        ListNode *p = (ListNode *)malloc(sizeof(ListNode));
-        p->val = arr[i];
+        //ListNode *p = (ListNode *)malloc(sizeof(ListNode));
+        //p->val = arr[i];
+        ListNode *p = new ListNode(arr[i]);
         r->next = p;
         r = p;
     }
@@ -103,10 +105,11 @@ void printLinkedListReverse(ListNode* head) {
 }
 //5. 单链表反转->尾插法
 ListNode* reverse(ListNode* head) {
-    if (head == NULL || head->next == NULL) return head;
+    if (head->next == NULL) return head;
 
-    ListNode *rev = (ListNode *)malloc(sizeof(ListNode));
-    rev->next = NULL;
+//    ListNode *rev = (ListNode *)malloc(sizeof(ListNode));
+//    rev->next = NULL;
+    ListNode *rev = new ListNode(-1);
     ListNode *cur = head->next;
     while(cur != NULL) {
         ListNode *tmp = cur;
@@ -120,11 +123,12 @@ ListNode* reverse(ListNode* head) {
 ListNode* getKthNode(ListNode* head, int k) {
     if (k == 0 || head == NULL) return NULL;
     ListNode *p = head->next;
-    ListNode *prev = p;
+    ListNode *prev = head->next;
     while (k > 0 && p != NULL) {
         p = p->next;
-        k--;
+        --k;
     }
+    //cout << prev->val << " " << p->val << endl;
     if (k > 1 || p == NULL) return NULL;
     while (p != NULL) {
         prev = prev->next;
@@ -135,8 +139,8 @@ ListNode* getKthNode(ListNode* head, int k) {
 //7. 查找单链表的中间节点
 ListNode* getMidNode(ListNode* head) {
     if (head == NULL || head->next == NULL) return head;
-    ListNode* p = head;
-    ListNode* prev = head;
+    ListNode *p = head;
+    ListNode *prev = head;
     while (p->next != NULL) {
         p = p->next;
         prev = prev->next;
@@ -218,6 +222,15 @@ void deleteNode(ListNode* head, ListNode* toBeDeleted) {
         }
     }
 }
+TreeNode* convertSortListToBST(ListNode* &head, int size) {
+    if (size == 0) return NULL;
+    TreeNode *root = new TreeNode(0);
+    root->left = convertSortListToBST(head, size/2);
+    root->val = head->val;
+    head = head->next;
+    root->right = convertSortListToBST(head, size - size/2 - 1);
+    return root;
+}
 TreeNode* sortedListToBST(ListNode* head) {
     if (head == NULL) return NULL;
     int size = 0;
@@ -230,15 +243,7 @@ TreeNode* sortedListToBST(ListNode* head) {
 
     return convertSortListToBST(q, size);
 }
-TreeNode* convertSortListToBST(ListNode* &head, int size) {
-    if (size == 0) return NULL;
-    TreeNode *root = new TreeNode(0);
-    root->left = convertSortListToBST(head, size/2);
-    root->val = head->val;
-    head = head->next;
-    root->right = convertSortListToBST(head, size - size/2 - 1);
-    return root;
-}
+
 int main()
 {
     int N;
@@ -247,9 +252,11 @@ int main()
     for (int i = 0; i < N; i++)
         cin >> arr[i];
     ListNode *head1 = createLinkedListHead(arr, N);
-    //cout << "Head Insert.\n" ;
-    printLinkedList(head1);
 
+    printLinkedList(head1);
+    //ListNode *rev = reverse(head1);
+    //printLinkedList(rev);
+    cout << getKthNode(head1, 3)->val << endl;
     //printLinkedListReverse(head1);
     //cout << "Reverse.\n" ;
     //ListNode* A = reverse(head1);

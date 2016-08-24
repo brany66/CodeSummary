@@ -3,5 +3,5 @@ project(Algorithm)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES leetcode-contest-1/LongestAbsoluteFile.cpp)
+set(SOURCE_FILES LinkedList/ClassicProblem.cpp)
 add_executable(Algorithm ${SOURCE_FILES})

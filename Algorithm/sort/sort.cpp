@@ -300,6 +300,29 @@ void quickHelp(vector<int>& a) {
     int l = 0, r = a.size();
     quickSort(a, l, r);
 }
+
+int maxSubSubMatrix(vector<vector<int>> &matrix, int k) {
+    if (matrix.empty() || matrix[0].empty()) return 0;
+    int m = matrix.size(), n = matrix[0].size();
+    int res = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = i; j < n; j++) {
+            vector<int> sum(m, 0);
+            for (int k = 0; k < m; k++) sum[k] += matrix[k][j];
+            int curSum = 0, curMax = INT_MIN;
+            set<int> s;
+            s.insert(0);
+            for (autp a: sum) {
+                curSum += a;
+                auto it = s.lower_bound(curSum - k);
+                if (it != s.end()) curMax = max(curMax, curSum - *it);
+                s.insert(curSum);
+            }
+            res = max(res, curMax);
+        }
+    }
+    return res;
+}
 int main()
 {
 //    int N;
