@@ -118,7 +118,6 @@ void levelOrder(treeNode* T) {
     q.push(T);
     while (!q.empty()) {
         t = q.front();
-        q.
         if (t->left)
             q.push(t->left);
         if(t->right)
