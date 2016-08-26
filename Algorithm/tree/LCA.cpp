@@ -26,23 +26,15 @@ struct treeNode {
  * 4. 而如果u是v的祖先，那么返回u的父结点，同理，如果v是u的祖先，那么返回v的父结点
  * @return
  */
-int query(treeNode* t, treeNode *u, treeNode *v) {
-    int left = u->val;
-    int right = v->val;
-
-    if (left > right) {
-        int tmp = left;
-        left = right;
-        right = tmp;
-    }
-    while (1) {
-        if (t->val < left)
-            t = t->right;
-        else if (t->val > right)
-            t = t->left;
-        else
-            return t->val;
-    }
+treeNode *get_BST_LCA(treeNode *root, treeNode *u, treeNode *v) {
+    if (!root) return NULL;
+    if (u->val < root->val && v->val < root->val)
+        return get_BST_LCA(root->left, u, v);
+    else if(u->val > root->val && v->val > root->val)
+        return get_BST_LCA(root->right, u, v);
+    else
+        return root;
+    return NULL;
 }
 //不是BST
 treeNode* getLCA(treeNode* root, treeNode* node1, treeNode* node2) {

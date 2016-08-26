@@ -144,9 +144,10 @@ bool contains(BSTNode *root, const elemType &val) {
  */
 void insertNode(BSTNode *&root, const elemType &val) {
     if (root == NULL) {
-        root = (BSTNode*)malloc(sizeof(BSTNode));
-        root->val = val;
-        root->left = root->right = NULL;
+        root = new BSTNode(val);
+//        root = (BSTNode*)malloc(sizeof(BSTNode));
+//        root->val = val;
+//        root->left = root->right = NULL;
     }
     else if (root->val > val)
         insertNode(root->left, val);
@@ -177,10 +178,11 @@ void removeNode(BSTNode *&root, const elemType &val) {
         BSTNode *tmp = root;
         root = (root->left != NULL) ? root->left : root->right;
         delete tmp;
+
     } else if (root->left == NULL && root->right == NULL) {
         //1
         delete root;
-        root = NULL;
+        root = NULL;//避免成为野指针
     }
 }
 void convertNode(BSTNode *root, BSTNode **pLast) {
