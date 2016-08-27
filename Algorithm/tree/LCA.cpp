@@ -5,6 +5,7 @@
 //
 
 #include <iostream>
+#include <algorithm>
 /**
  * https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/03.03.md
  * 所谓LCA，是当给定一个有根树T时，对于任意两个结点u、v，
@@ -90,5 +91,7 @@ void processRMQ(int Mat[MAXN][MAXN], int A[MAXN], int N) {
 }
 int main()
 {
+    vector<int> res;
+    res.vector(res.begin() + 1, res.end());
     return 0;
 }
