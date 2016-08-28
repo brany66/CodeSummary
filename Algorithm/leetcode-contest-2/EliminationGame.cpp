@@ -90,12 +90,21 @@ int lastRemaining_2(int n) {
     int cnt = n;
     int begin = 1;
     int offset = 2;
-    while (cnt > 0) {
+    int end = (n % 2 == 0) ? n : n -1;
+    while (cnt > 1) {
         cnt -= (cnt % 2 == 0) ? cnt/2 : (cnt/2 + 1);
         begin += offset/2;
+        if (end % offset == (begin - offset / 2)) end -= offset/2;
+        if (cnt == 1) return begin;
         offset *= 2;
+        if (end % offset == begin)
+            begin += offset/2;
         cnt -= (cnt % 2 == 0) ? cnt/2 : (cnt/2 + 1);
+        end -= offset/2;
+        offset *= 2;
+        if (cnt == 1) return begin;
     }
+    return begin;
 }
 int main() {
     int n;
