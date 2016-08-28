@@ -28,16 +28,17 @@ bool isRectangleCover(vector<vector<int>>& rectangles) {
     return true;
 }
 
+int area(const vector<int> &nums) {
+    if (nums.size() != 4) return 0;
+    return (nums[2] - nums[0]) * (nums[3] - nums[1]);
+}
 bool insert_corner(unordered_map<int, unordered_map<int, pair<int, int>>>& corner, int x, int y, int pos) {
+
     pair<int, int>& p = corner[x][y];
     if (p.first & pos) return false;
     p.first |= pos;
     ++p.second;
     return true;
-}
-int area(const vector<int> &nums) {
-    if (nums.size() != 4) return 0;
-    return (nums[2] - nums[0]) * (nums[3] - nums[1]);
 }
 bool isRectangleCover1(const vector<vector<int>>& rectangles) {
     if (rectangles.empty() || rectangles[0].empty() || rectangles.size() == 1) return true;
@@ -46,7 +47,6 @@ bool isRectangleCover1(const vector<vector<int>>& rectangles) {
 
     int left = INT_MAX, right = INT_MIN;
     int down = INT_MAX, up = INT_MIN;
-    int m = rectangles.size();
     int totalArea = 0, sum = 0;
     sum += area(rectangles[0]);
 
@@ -66,6 +66,7 @@ bool isRectangleCover1(const vector<vector<int>>& rectangles) {
     vector<int> tmp = {left, down, right, up};
     totalArea = area(tmp);
     if (totalArea != sum) return false;
+
     for (auto itx = corner.begin(); itx != corner.end(); ++itx) {
         int x = itx->first;
         for (auto ity = itx->second.begin(); ity != itx->second.end(); ++ity) {
