@@ -39,7 +39,27 @@ int helper(vector<int> &nums, int l, int r, int k ) {
 int findKthLargest(vector<int>& nums, int k) {
     return helper(nums, 0, nums.size() - 1, nums.size()- k);
 }
+typedef pair<int, int> P;
+void topKFrequent(vector<int> &nums, int k, vector<int> &res) {
+    unordered_map<int, int> cnt;
+    for (auto c : nums) cnt[x]++;
 
+    priority_queue<P, vector<P>, greater<p>> que;
+    for (auto &x : cnt) {
+        if (que.size() < k) {
+            que.push(make_pair(x.second, x.first));
+        } else {
+            if (que.top().first < x.second) {
+                que.pop();
+                que.push(make_pair(x.second, x.first));
+            }
+        }
+    }
+    while (!que.empty()) {
+        res.push_back(que.top().second);
+        que.pop();
+    }
+}
 int main() {
     vector<int> arr{3,2,1,5,6,4,7,8,9};
     int k ;

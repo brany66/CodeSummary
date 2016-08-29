@@ -11,23 +11,6 @@
 #include <climits>
 
 using namespace std;
-bool isRectangleCover(vector<vector<int>>& rectangles) {
-    if (rectangles.empty() || rectangles[0].empty() || rectangles.size() == 1) return true;
-    sort(rectangles.begin(), rectangles.end());
-
-    int m = rectangles.size();
-    int n = 4;
-    int left = rectangles[0][0], right = rectangles[0][2];
-    int down = rectangles[0][1], up = rectangles[0][3];
-    int l, r;
-    for (int i = 1; i < m; i++) {
-        if (rectangles[i][0] > rectangles[i-1][0] && rectangles[i-1][2] != rectangles[i][0] - 1) return false;
-        l = rectangles[i][2];
-        r = rectangles[i][3];
-    }
-    return true;
-}
-
 int area(const vector<int> &nums) {
     if (nums.size() != 4) return 0;
     return (nums[2] - nums[0]) * (nums[3] - nums[1]);
@@ -35,12 +18,13 @@ int area(const vector<int> &nums) {
 bool insert_corner(unordered_map<int, unordered_map<int, pair<int, int>>>& corner, int x, int y, int pos) {
 
     pair<int, int>& p = corner[x][y];
+    //cout << p.first << " " << p.second << endl;
     if (p.first & pos) return false;
     p.first |= pos;
     ++p.second;
     return true;
 }
-bool isRectangleCover1(const vector<vector<int>>& rectangles) {
+bool isRectangleCover(const vector<vector<int>>& rectangles) {
     if (rectangles.empty() || rectangles[0].empty() || rectangles.size() == 1) return true;
     //sort(rectangles.begin(), rectangles.end());
     unordered_map<int, unordered_map<int, pair<int, int>>> corner;
@@ -56,7 +40,7 @@ bool isRectangleCover1(const vector<vector<int>>& rectangles) {
         down = min(down, rec[1]);
         right = max(right, rec[2]);
         up = max(up, rec[3]);
-        sum += area(rec);
+        //sum += area(rec);
 
         if (!insert_corner(corner, rec[0], rec[1], 1)) return false;
         if (!insert_corner(corner, rec[2], rec[1], 2)) return false;
@@ -72,10 +56,11 @@ bool isRectangleCover1(const vector<vector<int>>& rectangles) {
         for (auto ity = itx->second.begin(); ity != itx->second.end(); ++ity) {
             int y = ity->first;
             int count = ity->second.second;
+            //在外层边上的交点
             if ((x == left || x == right) && (y == down || y == up)) {
-                if ( count != 1 ) return false;
+                if (count != 1) return false;
             }
-            else {
+            else { //内边上的交点
                 if (count !=2 && count !=4) return false;
             }
         }
@@ -89,7 +74,7 @@ int main() {
         for (int i = 0; i < T; ++i) {
             cin >> rectangles[i][0] >> rectangles[i][1] >> rectangles[i][2] >> rectangles[i][3];
         }
-        if (isRectangleCover1(rectangles)) {
+        if (isRectangleCover(rectangles)) {
             cout << "true" << endl;
         } else {
             cout << "false" << endl;
