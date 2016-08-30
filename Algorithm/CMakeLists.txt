@@ -3,5 +3,5 @@ project(Algorithm)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES string/NestListWeightSum_1.cpp string/NestListWeightSum_2.cpp)
+set(SOURCE_FILES string/RansomNote.cpp string/ZigZagConvert.cpp)
 add_executable(Algorithm ${SOURCE_FILES})
