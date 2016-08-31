@@ -6,6 +6,8 @@
 
 #include <iostream>
 #include <climits>
+#include <cassert>
+#include <cstring>
 
 using namespace std;
 class A {
@@ -37,11 +39,12 @@ int myAtoi(string str) {
         cout << digit << "----" << endl;
         if (sign == -1 && res > -((INT_MIN + digit) / 10))
             return INT_MIN;
-        else if (sign == 1 && res > ((INT_MAX -digit) / 10))
+        else if (sign == 1 && res > ((INT_MAX - digit) / 10))
             return INT_MAX;
         res = res * 10 + digit;
         i++;
     }
+
     return sign * res;
 }
 int main() {
