@@ -9,12 +9,26 @@
 using namespace std;
 class A {
 public :
-    bool isTrue;
-    int num;
+    int i;
+};
+class B : virtual public A {
+public :
+    int j;
+};
+class C : virtual public A {
+public :
+    int k;
+};
+class D: public B, public C {
+public:
+    int sum;
 };
 int main() {
-    A a;
-    if (a.isTrue)
-        cout << a.num << endl;
+    D d;
+    d.i = 1;
+    d.j = 2;
+    d.k = 3;
+    d.sum = d.i + d.j + d.k;
+    cout << d.sum << endl;
     return 0;
 }
