@@ -12,11 +12,13 @@ char *strncpy(char *dest, const char *src, unsigned int n) {
 	char *tmp = dest;
 	while (n-- > 0 && ((*tmp++ = *src++) != \'0');
 	while (n-- > 0) *tmp++ = '\0';
+	
 	return dest;
 }
 
-char *strcmp(const char *str1, const char *str2) {
+int strcmp(const char *str1, const char *str2) {
 	assert(NULL != str1 && NULL != str2);
+	
 	while (*str1 && *str2 && *str1 == *str2) {
 		str1++;
 		str2++;
@@ -44,6 +46,16 @@ void *memset(void *s, int c, size_t n) {
 	return s;
 }
 
+void *memcpy(void *dest, const void *src, size_t n) {
+	assert(NULL != dest && NULL != src);
+	int i = 0;
+	void *tmp = dest;
+	while (i < n) {
+		*((char *)tmp + i) = *((char *)src + i);
+		++i;
+	}
+	return dest;
+}
 int strStr(string haystack, string needle) {
 	if (needle.size() == 0) return 0;
 	int p1, p2, p1_move = haystack.size() - needle.size() + 1;
@@ -58,6 +70,28 @@ int strStr(string haystack, string needle) {
 	}
     return -1;
  }
+ 
+int myAtoi(string str) {
+	//if (str.size() == 0) return 0；
+	int i = 0, res = 0;
+	while (i < str.size() && str[i] == ' ') i++;
+	
+	int sign = (str[i] == '-') ? -1 : 1;
+	if (str[i] == '-' || str[i] == '+') i++;
+	while (i < str.size()) {
+		if (str[i] < '0' || str[i] > '9') break;
+		int digit = str[i] - '0';
+		if (sign == -1 && res > -((INT_MIN + digit) / 10))
+			return INT_MIN;
+		else if (sign == 1 && res > ((INT_MAX -digit) / 10))
+			return INT_MAX;
+		
+		res = res * 10 + digit;
+		i++;
+	}
+	return sign * res;
+}
+	
 
 string longestPalindrome(string s) {
 	if (string.empty()) return "";
