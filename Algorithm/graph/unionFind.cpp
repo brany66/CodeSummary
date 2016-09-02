@@ -20,16 +20,6 @@
  * 2. 给出两个节点，判断它们是否连通，如果连通，需要给出具体的路径
  */
 using namespace std;
-class Edge {
-public:
-    int a, b;
-    int cost;
-    bool isBuild;
-    bool operator < (const Edge &e)  const {
-        return cost < e.cost;
-    }
-};
-Edge edge[100];
 
 class UF {
 private:
@@ -62,6 +52,17 @@ public :
         count--;
     }
 };
+
+class Edge {
+public:
+    int a, b;
+    int cost;
+    bool isBuild;
+    bool operator < (const Edge &e)  const {
+        return cost < e.cost;
+    }
+};
+Edge edge[100];
 
 class Quick_UF {
 private:
