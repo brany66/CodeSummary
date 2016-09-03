@@ -7,6 +7,7 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include <cstring>
 
 using namespace std;
 vector<int> findSubstring(string s, vector<string>& words) {
@@ -28,9 +29,9 @@ vector<int> findSubstring(string s, vector<string>& words) {
         unordered_map<string, int> slidingWindow;
         for (int i = start; i + wsize <= s.length(); i += wsize) {
             string word = s.substr(i, wsize);
-            cout << "yes" << endl;
+            //cout << "yes" << endl;
             if (hash.find(word) == hash.end()) {
-                cout << "yes" << endl;
+                //cout << "yes" << endl;
                 slidingWindow.clear();
                 count = 0;
             } else {
@@ -77,6 +78,10 @@ string countAndSay(int n) {
     return res;
 }
 int main() {
+    int* pint = 0;
+    pint += 6;
+    cout << pint << endl;
+
     string str = "barfoothefoobarman";
     vector<string> words{"foo", "bar"};
     for (auto c: words)
@@ -85,5 +90,7 @@ int main() {
     for (auto c : res)
         cout << c ;
     cout << endl;
+    string str1;
+    auto size = strlen("ABCD");
     return 0;
 }
