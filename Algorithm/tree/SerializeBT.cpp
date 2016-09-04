@@ -33,6 +33,18 @@ vector<string> split(const string &str, string delimit) {
 
     return results;
 }
+vector<string> split_1(const string &str, string regex) {
+    vector<string> res;
+    int lastIndex = 0, index;
+    while ((index = str.find(regex, lastIndex)) != string::npos) {
+        res.push_back(str.substr(lastIndex, index - lastIndex));
+        lastIndex = index + regex.size();
+    }
+    if (lastIndex != string::npos) {
+        res.push_back(str.substr(lastIndex, str.size() - lastIndex));
+    }
+    return res;
+}
 // Encodes a tree to a single string.
 string serialize(TreeNode* root) {
     vector<TreeNode*> res;
@@ -66,23 +78,42 @@ TreeNode* deserialize(string data) {
     TreeNode *root = new TreeNode(atoi(da[0].c_str()));
     queue<TreeNode*> que;
     que.push(root);
-    bool leaf = true;
+    bool flag = true;
     for (int  i = 1; i < da.size(); i++) {
         if (da[i] != "#") {
             TreeNode *node = new TreeNode(atoi(da[i].c_str()));
-            if (leaf)
+            if (flag)
                 que.front()->left = node;
             else
                 que.front()->right = node;
             que.push(node);
         }
-        if (!leaf)
+        if (!flag)
             que.pop();
-        leaf = !leaf;
+        flag = !flag;
     }
     return root;
 }
-
+TreeNode* deserialize_1(string data) {
+    if (data == "[]") return NULL;
+    vector<string> da = split(data.substr(1, data.size() - 2), ",");
+    TreeNode *root = new TreeNode(atoi(da[0].c_str()));
+    queue<TreeNode*> q;
+    q.push(root);
+    bool flag = true;
+    for (int i = 1; i < da.size(); i++) {
+        if (da[i] != "#") {
+            TreeNode *node = new TreeNode(atoi(da[i].c_str()));
+            if (flag)
+                q.front()->left = node;
+            else
+                q.front()->right = node;
+        }
+        if (!flag) q.pop();
+        flag = !flag;
+    }
+    return root;
+}
 int main() {
     unordered_set<string> wordDict;
 
