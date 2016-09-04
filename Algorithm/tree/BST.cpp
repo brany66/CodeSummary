@@ -185,6 +185,7 @@ void removeNode(BSTNode *&root, const elemType &val) {
         root = NULL;//避免成为野指针
     }
 }
+
 void convertNode(BSTNode *root, BSTNode **pLast) {
     if (root == NULL) return;
     BSTNode *cur = root;

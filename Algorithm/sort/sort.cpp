@@ -8,6 +8,7 @@
 #include <vector>
 #include <limits.h>
 #include <cstdlib>
+#include <set>
 
 using namespace std;
 void swap(int &a, int &b) {
@@ -290,7 +291,7 @@ void quickSort(vector<int>& a, int l, int r) {
                 j--;
             }
         }
-        a[j] = pivot;
+        a[i] = pivot;
         quickSort(a, l, i - 1);
         quickSort(a, i + 1, r);
     }
@@ -312,7 +313,7 @@ int maxSubSubMatrix(vector<vector<int>> &matrix, int k) {
             int curSum = 0, curMax = INT_MIN;
             set<int> s;
             s.insert(0);
-            for (autp a: sum) {
+            for (auto a: sum) {
                 curSum += a;
                 auto it = s.lower_bound(curSum - k);
                 if (it != s.end()) curMax = max(curMax, curSum - *it);
@@ -344,11 +345,12 @@ int main()
 
     vector<int> arr1 = {820, 631, 892, 841, 742, 251, 9, 642, 645, 896, 996,
                         938, 80, 691, 8, 785, 393, 707, 124, 67, 116, 362, 84, 104, 39, 500, 608, 740, 543};
+    //quickHelp(arr1);
     radixSort(arr1);
     print(arr1);
 
     vector<int> arr2 = {8, 13, 0, 3, 20, 16, 9, 7, 11, 5};
-   heapSort(arr2);
+    heapSort(arr2);
    // quickHelp(arr2);
     //shellSort(arr2);
     print(arr2);
