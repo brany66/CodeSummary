@@ -26,6 +26,9 @@ struct comp {
         return false;
     }
 };
+bool comp1(const string s1, const string s2) {
+    return (s1 + s2) < (s2 + s1);
+}
 string getLargest(vector<int> &nums) {
 
     vector<string> str_nums(nums.size());
@@ -36,7 +39,7 @@ string getLargest(vector<int> &nums) {
     }
 
     // sort the string as the way we want
-    sort(str_nums.begin(), str_nums.end(), comp());
+    sort(str_nums.begin(), str_nums.end(), comp1);
     for (auto c: str_nums)
         cout << c << " " ;
     cout << endl;

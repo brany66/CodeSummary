@@ -29,9 +29,7 @@ vector<int> findSubstring(string s, vector<string>& words) {
         unordered_map<string, int> slidingWindow;
         for (int i = start; i + wsize <= s.length(); i += wsize) {
             string word = s.substr(i, wsize);
-            //cout << "yes" << endl;
             if (hash.find(word) == hash.end()) {
-                //cout << "yes" << endl;
                 slidingWindow.clear();
                 count = 0;
             } else {
@@ -54,6 +52,28 @@ vector<int> findSubstring(string s, vector<string>& words) {
         }
     }
     return res;
+}
+vector<int> findSubstring_2(string s, vector<string>& words) {
+    unordered_map<string, int> counts;
+    for (string word : words)
+        counts[word]++;
+    int n = s.length(), num = words.size(), len = words[0].length();
+    vector<int> indexes;
+    for (int i = 0; i < n - num * len + 1; i++) {
+        unordered_map<string, int> seen;
+        int j = 0;
+        for (; j < num; j++) {
+            string word = s.substr(i + j * len, len);
+            if (counts.find(word) != counts.end()) {
+                seen[word]++;
+                if (seen[word] > counts[word])
+                    break;
+            }
+            else break;
+        }
+        if (j == num) indexes.push_back(i);
+    }
+    return indexes;
 }
 string countAndSay(int n) {
     if (0 == n) return "";

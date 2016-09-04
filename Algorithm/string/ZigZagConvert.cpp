@@ -60,6 +60,7 @@ string convert1(string s, int numRows) {
     }
 
     delete[] str;
+    str = NULL;
     return s;
 }
 int main() {
