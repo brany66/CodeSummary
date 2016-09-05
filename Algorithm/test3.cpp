@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include <vector>
+#include <cmath>
 
 using namespace std;
 long long  numTrees(int n) {
@@ -60,11 +61,51 @@ void sovle(int n)
     }
     cout << endl;
 }
+int countWays(int n) {
+    // write code here
+    if (n <= 1) return 0;
+    if (n == 2) return 1;
+    if (n == 3) return 2;
+    int a = 1, b = 2;
+    int res;
+    int mod = 1000000007;
+    for (int i = 4; i <= n; i++) {
+        res = (a + b) % mod;
+        a = b % mod;
+        b = res % mod;
+    }
+    return res % mod;
+}
+
+double cal(int n) {
+    if(n==0)
+        return 0;
+    // return n+n/2+getDistance(n/2);
+    double result = 0.0;
+
+    while(n!=0){
+        result +=n + n/2;
+        n/=2;
+    }
+    return result;
+}
+int calcDistance(int A, int B, int C, int D) {
+    // write code here
+    int res = 0;
+   // res += cal(A) + cal(B) + cal(C) + cal(D);
+    return 3 * ( A + B + C + D);
+}
 int main() {
     int N;
+    cout << ceil(2.5) <<  " " << ceil(7.25) <<  " " << ceil(4.6) << endl;
+    cout << floor(2.5) << " " << floor(7.25) <<  " " << floor(4.6) << endl;
+    cout << cal(8) << endl;
+    cout << "res  " << calcDistance(100, 90, 80, 70) << endl;
     while (cin >> N) {
-        cout << numTrees(N) << "   " << numTrees_2(N)<< endl;
+        //cout << numTrees(N) << "   " << numTrees_2(N)<< endl;
+        cout << countWays(N) <<  endl;
     }
+
     return 0;
 }
 
