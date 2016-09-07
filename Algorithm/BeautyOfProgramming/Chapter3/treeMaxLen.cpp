@@ -5,6 +5,7 @@
 //
 
 #include <iostream>
+#include <cstdio>
 
 using namespace std;
 struct TreeNode {
@@ -47,6 +48,20 @@ void findMaxLen(TreeNode *root) {
     if (root->maxLeft + root->maxRight > maxLen)
         maxLen = root->maxLeft + root->maxRight;
 }
+typedef union {
+    long i;
+    int k[5];
+    char c;
+} DATE;
+struct data {
+    int cat;
+    DATE cow;
+    double dog;
+} too;
+DATE MAX;
 int main() {
+    printf("%d",sizeof(struct data)+sizeof(MAX));
+    const char *p = "ABC";
+    if (p == "ABC")cout << "YES\n";
     return 0;
 }
