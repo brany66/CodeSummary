@@ -46,8 +46,8 @@
       <file leaf-file-name="treeMaxLen.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BeautyOfProgramming/Chapter3/treeMaxLen.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="47" column="48" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
+            <state relative-caret-position="494">
+              <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -537,14 +537,7 @@
       <workItem from="1472348390331" duration="25947000" />
       <workItem from="1472387039369" duration="48403000" />
       <workItem from="1472873221759" duration="7995000" />
-      <workItem from="1472912340053" duration="48822000" />
-    </task>
-    <task id="LOCAL-00008" summary="&quot;2016-7-26&quot;">
-      <created>1469681875327</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1469681875327</updated>
+      <workItem from="1472912340053" duration="48843000" />
     </task>
     <task id="LOCAL-00009" summary="&quot;2016-7-26&quot;">
       <created>1469681880917</created>
@@ -882,11 +875,18 @@
       <option name="project" value="LOCAL" />
       <updated>1473169950666</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="&quot;2016-9-6&quot;">
+      <created>1473210773916</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1473210773917</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="501712000" />
+    <option name="totallyTimeSpent" value="501733000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1572,8 +1572,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BeautyOfProgramming/Chapter3/treeMaxLen.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="48" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
+        <state relative-caret-position="494">
+          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
           <folding />
         </state>
       </provider>

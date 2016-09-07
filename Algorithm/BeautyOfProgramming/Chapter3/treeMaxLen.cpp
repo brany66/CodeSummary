@@ -45,7 +45,7 @@ void findMaxLen(TreeNode *root) {
 
     //update
     if (root->maxLeft + root->maxRight > maxLen)
-        maxLen = root->maxLeft + root->maxRight；
+        maxLen = root->maxLeft + root->maxRight;
 }
 int main() {
     return 0;
