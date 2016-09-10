@@ -27,10 +27,7 @@ struct ListNode {
     int val;
     struct ListNode* next;
 
-    ListNode(int data) {
-        val = data;
-        next = NULL;
-    }
+    ListNode(int data): val(data), next(NULL) {}
 };
 struct TreeNode {
     int val;
@@ -43,11 +40,9 @@ ListNode* createLinkedListHead(int *arr, int N) {
     ListNode *root, *p;
     int i;
     root = new ListNode(-1);
-    // root = (ListNode *)malloc(sizeof(ListNode));
-    // root->next = NULL;
+
     for (i = 0; i < N; i++) {
-        //p = (ListNode *)malloc(sizeof(ListNode));
-       // p->val = arr[i];
+
         p = new ListNode(arr[i]);
         p->next = root->next;
         root->next = p;

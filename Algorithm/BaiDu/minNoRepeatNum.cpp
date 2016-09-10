@@ -34,6 +34,33 @@ class C : virtual public A {
 class D: public B, public C{
 
 };
+
+class animal
+{
+protected:
+    int age;
+public:
+    virtual void print_age(void) = 0;
+};
+class dog : public animal
+{
+public:
+    dog() {this -> age = 2;}
+    ~dog() { }
+    virtual void print_age(void)
+    {
+        cout<<"Wang, my age = "<<this -> age<<endl;
+    }
+};
+class cat: public animal
+{
+public:
+    cat() {this -> age = 1;}     ~cat() { }
+    virtual void print_age(void)
+    {
+        cout<<"Miao, my age = "<<this -> age<<endl;
+    }
+};
 int main() {
     int n;
     http://www.taobao.com
@@ -41,8 +68,6 @@ int main() {
     //cout << (93&-8) << endl;
     cout << "A " << sizeof(A) << " B " << sizeof(B) <<
          " C " << sizeof(C) << " D " << sizeof(D) << endl;
-    while (cin >> n) {
 
-    }
     return 0;
 }
