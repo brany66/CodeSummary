@@ -3,5 +3,5 @@ project(Algorithm)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES CPlusClass/test1.cpp)
+set(SOURCE_FILES CPlusClass/test1.cpp Tencent/grayCode.cpp)
 add_executable(Algorithm ${SOURCE_FILES})
