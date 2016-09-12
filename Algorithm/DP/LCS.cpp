@@ -8,8 +8,8 @@
 #include <string.h>
 using namespace std;
 const int XY = 0, X = 1, Y= 2;
-char *str1, *str2;
-
+//char *str1, *str2;
+//string str1, str2;
 int c[200][200], b[200][200];
 int c1[2][200];
 /**
@@ -27,7 +27,7 @@ int c1[2][200];
  *           c[i-1][j-1] + 1             if i,j > 0 && xi = yj
  *           max{c[i-1][j], c[i][j-1]}   if i, j > 0 && xi != yj
  */
-string printLCS(int i, int j) {
+/*string printLCS(int i, int j) {
     if (i == 0 || j == 0) return "";
     switch (b[i][j]) {
         case XY: return printLCS(i-1, j-1) + str1[i-1];
@@ -35,8 +35,8 @@ string printLCS(int i, int j) {
         case Y: printLCS(i, j-1);
         default: ;
     }
-}
-int LCS1() {
+}*/
+/*int LCS1() {
     //reset();
     int i, j;
     for (i = 0; i < strlen(str1); i++) c[i][0] = 0;
@@ -59,7 +59,7 @@ int LCS1() {
         }
     }
     return c[strlen(str1)][strlen(str2)];
-}
+}*/
 /**
  * 定义C[i][j]为Xi和Yj的一个LCS长度
  * c[i][j] = 0                           if i = 0 or j = 0
@@ -70,10 +70,12 @@ int LCS1() {
  * tmp1 = c[i-1][j], 计算c[i,j-1] tmp1 = c[i-1][j-1];
  *
  */
-int LCS2() {
+/*int LCS2() {
     int i, j;
-    int len1 = strlen(str1);
-    int len2 = strlen(str2);
+    //int len1 = strlen(str1);
+    //int len2 = strlen(str2);
+    int len1 = str1.size();
+    int len2  = str2.size();
     memset(c1[0], 0, len2 * sizeof(int));
     c1[1][0] = 0;
     int tag = 1;
@@ -88,6 +90,28 @@ int LCS2() {
         tag = 1-tag;
     }
     return c1[1-tag][len2];
+}*/
+int LCS_4(string &str1, string &str2) {
+    int i, j;
+    //int len1 = strlen(str1);
+    //int len2 = strlen(str2);
+    int len1 = str1.size();
+    int len2  = str2.size();
+    //memset(c1[0], 0, len2 * sizeof(int));
+    vector<vector<int>> dp(2, vector<int>(len2+1, 0));
+    dp[1][0] = 0;
+    int tag = 1;
+    for (i = 1; i <= len1; i++) {
+        for (j = 1; j <= len2; j++) {
+            if (str1[i-1] == str2[j-1]) {
+                dp[tag][j] = dp[1-tag][j-1] + 1;
+            }else  {
+                dp[tag][j] = max(dp[1-tag][j], dp[tag][j-1]);
+            }
+        }
+        tag = 1-tag;
+    }
+    return dp[1-tag][len2];
 }
 int main()
 {
@@ -100,16 +124,21 @@ int main()
 //    cout << str1 << " " << str2 << endl;
 //    cout << "max length: " << LCS1() << ", LCS : " << printLCS(strlen(str1), strlen(str2)) << endl;
 
-    std::string A1 = "ACCGGTCGAGTGCGCGGAAGCCGGCCGAA";
-    std::string B1 = "GTCGTTCGGAATGCCGTTGCTCTGTAAA";
-    str1 = new char[A1.length() + 1];
-    strcpy(str1, A1.c_str());
-    str2 = new char[B1.length() + 1];
-    strcpy(str2, B1.c_str());
-    cout << str1 << " " << str2 << endl;
-    cout << "max length: " << LCS1()  << endl;
-
-    cout << "max length2: " << LCS2()  << endl;
+//    std::string A1 = "ACCGGTCGAGTGCGCGGAAGCCGGCCGAA";
+//    std::string B1 = "GTCGTTCGGAATGCCGTTGCTCTGTAAA";
+//    str1 = new char[A1.length() + 1];
+//    strcpy(str1, A1.c_str());
+//    str2 = new char[B1.length() + 1];
+//    strcpy(str2, B1.c_str());
+//    cout << str1 << " " << str2 << endl;
+//    cout << "max length: " << LCS1()  << endl;
+//
+//    cout << "max length2: " << LCS2()  << endl;
+    string str1, str2;
+    while (getline(cin, str1)) {
+        getline(cin, str2);
+        cout << LCS_4(str1, str2) << endl;
+    }
     return 0;
 }
 

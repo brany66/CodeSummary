@@ -7,6 +7,7 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <cstdio>
 
 using namespace std;
 long long  numTrees(int n) {
@@ -95,16 +96,103 @@ int calcDistance(int A, int B, int C, int D) {
    // res += cal(A) + cal(B) + cal(C) + cal(D);
     return 3 * ( A + B + C + D);
 }
-int main() {
-    int N;
-    cout << ceil(2.5) <<  " " << ceil(7.25) <<  " " << ceil(4.6) << endl;
-    cout << floor(2.5) << " " << floor(7.25) <<  " " << floor(4.6) << endl;
-    cout << cal(8) << endl;
-    cout << "res  " << calcDistance(100, 90, 80, 70) << endl;
-    while (cin >> N) {
-        //cout << numTrees(N) << "   " << numTrees_2(N)<< endl;
-        cout << countWays(N) <<  endl;
+//
+class A{
+public:
+    virtual ~A() {
+        cout << "AAAA" << endl;
     }
+};
+class B: public A {
+public:
+    ~B() {
+        cout << "BBBB" << endl;
+    }
+};
+#define AA 4 + 5
+#define BB AA * AA
+
+int f(int a, int b, int c) {
+    return  0;
+}
+int x= 4;
+void incre() {
+    static int x=1;
+    x *= x+1;
+    cout << x << endl;
+}
+enum etest {
+    e1,
+    e2,
+    e3 = 10,
+    e4,
+    e5 = 'a',
+    e6
+}epr;
+struct testA {
+    char ch;
+    int a;
+    short s;
+
+
+};
+struct st_t {
+    int st;
+    short *pda;
+    char err[32];
+};
+class X {
+public:
+    void x00() {}
+};
+//值类型和引用类型
+// 子进程继承了父进程的那些
+// CPU使用率过高，load过高的原因
+
+
+int main() {
+    cout << sizeof(X) << endl;
+    st_t st[16];
+    char *p = (char*)(st[2].err + 32);
+    cout << (p - (char*)(st)) << endl;
+
+//    const int N = 10;
+//    const int M = 2;
+//    int *a = new int[N];
+//    for (int i = 0; i < N; i++)
+//        a[i] = (0 == i%2) ?i+2 : i+0;
+//    int (*b)[N/M] = (int(*)[N/M])a;
+//    for (int i = 0; i < M; ++i)
+//        for (int j = 0; j < N/M; ++j)
+//            cout << b[i][j];
+//    cout << endl;
+
+    //cout << sizeof(testA) << endl;
+
+    //cout << e4 <<  " " << e6 << endl;
+
+    //char *p[] = {"TENCENT", "CAMPUS", "RECUR"};
+   // char **pp[] = {p+2, p+1, p};
+    //char  ***ppp = pp;
+    //cout << **++ppp << "  " << *++*++ppp << endl;
+
+
+    //for (int i = 1; i < x; i++)
+    //    incre();
+    //return f(printf("a"), printf("b"), printf("c"));
+    //cout << BB * BB << endl;
+    //A *p = new B();
+   // delete p;
+
+//    int N;
+//    cout << ceil(2.5) <<  " " << ceil(7.25) <<  " " << ceil(4.6) << endl;
+//    cout << floor(2.5) << " " << floor(7.25) <<  " " << floor(4.6) << endl;
+//    cout << cal(8) << endl;
+//    cout << "res  " << calcDistance(100, 90, 80, 70) << endl;
+//    while (cin >> N) {
+//        //cout << numTrees(N) << "   " << numTrees_2(N)<< endl;
+//        cout << countWays(N) <<  endl;
+//    }
 
     return 0;
 }
