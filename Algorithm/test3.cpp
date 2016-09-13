@@ -8,6 +8,7 @@
 #include <vector>
 #include <cmath>
 #include <cstdio>
+#include <cstring>
 
 using namespace std;
 long long  numTrees(int n) {
@@ -151,11 +152,17 @@ public:
 
 
 int main() {
+    char str[10] = "abcdefg";
+    strcpy(str, "123456");
+    memcpy(str, "147258", 5);
+    cout << str << endl;
+
     cout << sizeof(X) << endl;
     st_t st[16];
     char *p = (char*)(st[2].err + 32);
     cout << (p - (char*)(st)) << endl;
 
+    cout << pow(3,4) << endl;
 //    const int N = 10;
 //    const int M = 2;
 //    int *a = new int[N];
