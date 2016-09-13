@@ -20,16 +20,16 @@ int main()
         int n, bot, top, ans=0;
         cin >> n >> bot >> top;
         while(n--){
-            int m, c, v, dp[V]={0};
-            for(int j=0; j<=top; j++)
+            int m, c, v, dp[V] = {0};
+            for(int j = 0; j <= top; j++)
                 dp[j] = -INF;
             dp[0] = 0;
 
-            cin >>m;
-            for(int i=0; i<m; i++){
-                cin >>c >>v;
-                for(int j=top; j>=c; j--)
-                    dp[j] = max(dp[j], dp[j-c]+v);
+            cin >> m;
+            for(int i = 0; i < m; i++){
+                cin >> c >>v;
+                for(int j = top; j >= c; j--)
+                    dp[j] = max(dp[j], dp[j-c] + v);
             }
 
             for(int j=bot; j<=top; j++)
