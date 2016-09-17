@@ -3,5 +3,5 @@ project(Algorithm)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES BaiDu/test.cpp)
+set(SOURCE_FILES NetEase/drawLine.cpp)
 add_executable(Algorithm ${SOURCE_FILES})
