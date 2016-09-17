@@ -13,16 +13,21 @@
 #include <cstdlib>
 #include <string>
 #include <cstring>
+#include <memory>
 
 
 using namespace std;
 
 int main() {
-    //map<char, int> index;
-    string stringA;
-    vector<int> index(256, -1);
+    char *c[] = { "ENTER", "NEW", "POINT", "FIRST" };
+    char **cp[] = { c+3, c+2, c+1, c };
+    char ***cpp = cp;
 
-    for (int i = 0; i < stringA.size(); i++) {
-    }
+    printf("%s", **++cpp);
+    printf("%s", *--*++cpp+3);
+    printf("%s", *cpp[-2]+3);
+    printf("%s\n", cpp[-1][-1]+1);
+
+    shared_ptr<int> p(new int(1014));
     return 0;
 }
