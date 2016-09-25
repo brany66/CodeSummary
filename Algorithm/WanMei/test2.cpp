@@ -22,7 +22,7 @@ int main() {
         }
         for(int i = 1;i < n; ++i) {
             for(int j = i+1; j <= n; ++j) {
-                dp[j-i][j]=max(res[j] - res[j-i-1] - dp[j-i+1][j],
+                dp[j-i][j] = max(res[j] - res[j-i-1] - dp[j-i+1][j],
                                res[j] - res[j-i-1] - dp[j-i][j-1]);
             }
         }

@@ -6,8 +6,11 @@
 
 #include <iostream>
 #include <cstring>
+#include <cstdlib>
 
 using namespace std;
+static int *p = (int *)malloc(10 * sizeof(int));
+
 #define ADD(x, y) x+y
 
 class Test {
