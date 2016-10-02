@@ -17,7 +17,6 @@ int findKthLargest1(vector<int>& nums, int k) {
     return 0;
 }
 
-
 int helper(vector<int> &nums, int l, int r, int k ) {
     if (l == r) return nums[l];
 
