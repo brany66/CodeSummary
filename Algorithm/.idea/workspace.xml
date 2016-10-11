@@ -12,15 +12,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="704979fe-71f4-4237-95ae-466217b08593" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinarySearch/fontSize.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MS/test1.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MS/test2.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MS/test3.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DP/treeDP/TextData.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DP/treeDP/wirelessRoutersSampleTest.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xiaozhao/DD/test1.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xiaozhao/DD/test2.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xiaozhao/NetEase/test1.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xiaozhao/NetEase/test2.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xiaozhao/NetEase/test4.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xiaozhao/NetEase/test5.cpp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NetEase/supernaturalNumber.cpp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Algorithm.iml" afterPath="$PROJECT_DIR$/.idea/Algorithm.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NetEase/test3.cpp" afterPath="$PROJECT_DIR$/NetEase/test3.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zhaoyin.cpp" afterPath="$PROJECT_DIR$/zhaoyin.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/BaiDu/01sort.cpp" afterPath="$PROJECT_DIR$/xiaozhao/BaiDu/01sort.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/BaiDu/eatGood.cpp" afterPath="$PROJECT_DIR$/xiaozhao/BaiDu/eatGood.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/BaiDu/minNoRepeatNum.cpp" afterPath="$PROJECT_DIR$/xiaozhao/BaiDu/minNoRepeatNum.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/BaiDu/test.cpp" afterPath="$PROJECT_DIR$/xiaozhao/BaiDu/test.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/DigitDP/supernaturalNumber.cpp" afterPath="$PROJECT_DIR$/xiaozhao/NetEase/supernaturalNumber.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JD/finalAward.cpp" afterPath="$PROJECT_DIR$/xiaozhao/JD/finalAward.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JD/luckNumber.cpp" afterPath="$PROJECT_DIR$/xiaozhao/JD/luckNumber.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/MS/test1.cpp" afterPath="$PROJECT_DIR$/xiaozhao/MS/test1.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/MS/test2.cpp" afterPath="$PROJECT_DIR$/xiaozhao/MS/test2.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/MS/test3.cpp" afterPath="$PROJECT_DIR$/xiaozhao/MS/test3.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/NetEase/digitNumber.cpp" afterPath="$PROJECT_DIR$/xiaozhao/NetEase/digitNumber.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/NetEase/drawLine.cpp" afterPath="$PROJECT_DIR$/xiaozhao/NetEase/drawLine.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/NetEase/elegantPoint.cpp" afterPath="$PROJECT_DIR$/xiaozhao/NetEase/elegantPoint.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/NetEase/eliminateGame.cpp" afterPath="$PROJECT_DIR$/xiaozhao/NetEase/eliminateGame.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/NetEase/imageProcess.cpp" afterPath="$PROJECT_DIR$/xiaozhao/NetEase/imageProcess.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/NetEase/scanMurshroom.cpp" afterPath="$PROJECT_DIR$/xiaozhao/NetEase/scanMurshroom.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/NetEase/souceCodeCompile.cpp" afterPath="$PROJECT_DIR$/xiaozhao/NetEase/souceCodeCompile.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/NetEase/test3.cpp" afterPath="$PROJECT_DIR$/xiaozhao/NetEase/test3.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tencent/grayCode.cpp" afterPath="$PROJECT_DIR$/xiaozhao/Tencent/grayCode.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/WanMei/test2.cpp" afterPath="$PROJECT_DIR$/xiaozhao/WanMei/test2.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cy/test1.cpp" afterPath="$PROJECT_DIR$/xiaozhao/cy/test1.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/google/Parentheses.cpp" afterPath="$PROJECT_DIR$/xiaozhao/google/Parentheses.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/leetcode-contest-1/LexicographicalNumbers.cpp" afterPath="$PROJECT_DIR$/contest/leetcode1/LexicographicalNumbers.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/leetcode-contest-1/LongestAbsoluteFile.cpp" afterPath="$PROJECT_DIR$/contest/leetcode1/LongestAbsoluteFile.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/leetcode-contest-1/sol387.cpp" afterPath="$PROJECT_DIR$/contest/leetcode1/sol387.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/leetcode-contest-2/EliminationGame.cpp" afterPath="$PROJECT_DIR$/contest/leetcode2/EliminationGame.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/leetcode-contest-2/PerfectRectangle.cpp" afterPath="$PROJECT_DIR$/contest/leetcode2/PerfectRectangle.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/leetcode-contest-3/decodingStirng.cpp" afterPath="$PROJECT_DIR$/contest/leetcode3/decodingStirng.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/queue_youdao.cpp" afterPath="$PROJECT_DIR$/xiaozhao/queue_youdao.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/shuffle_youdao.cpp" afterPath="$PROJECT_DIR$/xiaozhao/shuffle_youdao.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/splitWOrd.cpp" afterPath="$PROJECT_DIR$/splitWord.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/treeDP/magicCube.cpp" afterPath="$PROJECT_DIR$/DP/treeDP/magicCube.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/treeDP/paint.cpp" afterPath="$PROJECT_DIR$/DP/treeDP/paint.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/treeDP/paint2.cpp" afterPath="$PROJECT_DIR$/DP/treeDP/paint2.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/treeDP/wirelessRouters.cpp" afterPath="$PROJECT_DIR$/DP/treeDP/wirelessRouters.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/zhaoyin.cpp" afterPath="$PROJECT_DIR$/xiaozhao/zhaoyin.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/zy2.cpp" afterPath="$PROJECT_DIR$/xiaozhao/zy2.cpp" />
     </list>
     <ignored path="Algorithm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,66 +80,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="test3.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MS/test3.cpp">
+        <entry file="file://$PROJECT_DIR$/xiaozhao/MS/test3.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="634">
-              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-              <folding>
-                <element signature="e#135#154#0" expanded="true" />
-                <marker date="1476105874133" expanded="true" signature="475:567" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fontSize.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BinarySearch/fontSize.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-29">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test1.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MS/test1.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-              <folding>
-                <element signature="e#135#154#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wirelessRouters.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/treeDP/wirelessRouters.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test2.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MS/test2.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="724">
-              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+            <state relative-caret-position="418">
+              <caret line="31" column="54" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
               <folding>
                 <element signature="e#135#154#0" expanded="true" />
               </folding>
@@ -123,7 +118,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tree/SerializeBT.cpp" />
         <option value="$PROJECT_DIR$/JD/finalAward.cpp" />
         <option value="$PROJECT_DIR$/DP/uniquePath.cpp" />
         <option value="$PROJECT_DIR$/SMCode/gupiao.cpp" />
@@ -174,6 +168,7 @@
         <option value="$PROJECT_DIR$/MS/test3.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/MS/test2.cpp" />
+        <option value="$PROJECT_DIR$/xiaozhao/MS/test3.cpp" />
       </list>
     </option>
   </component>
@@ -232,7 +227,24 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algorithm" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algorithm" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
     </panes>
   </component>
@@ -245,17 +257,18 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\CTest\CodeSummary\Algorithm\tree" />
-      <recent name="D:\CTest\CodeSummary\Algorithm\Backtracking" />
-      <recent name="D:\CTest\CodeSummary\Algorithm\graph" />
-      <recent name="D:\CTest\CodeSummary\Algorithm" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\CTest\CodeSummary\Algorithm\DigitDP" />
       <recent name="D:\CTest\CodeSummary\Algorithm\BinarySearch" />
       <recent name="D:\CTest\CodeSummary\Algorithm\trie" />
       <recent name="D:\CTest\CodeSummary\Algorithm\tree" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CTest\CodeSummary\Algorithm\xiaozhao" />
+      <recent name="D:\CTest\CodeSummary\Algorithm\contest" />
+      <recent name="D:\CTest\CodeSummary\Algorithm\DP" />
+      <recent name="D:\CTest\CodeSummary\Algorithm\tree" />
+      <recent name="D:\CTest\CodeSummary\Algorithm\Backtracking" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Algorithm">
@@ -470,14 +483,7 @@
       <workItem from="1475320951828" duration="29922000" />
       <workItem from="1475478118189" duration="5693000" />
       <workItem from="1475995974426" duration="6846000" />
-      <workItem from="1476095927264" duration="13507000" />
-    </task>
-    <task id="LOCAL-00028" summary="&quot;2016-8-15&quot;">
-      <created>1471677198326</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1471677198326</updated>
+      <workItem from="1476095927264" duration="13984000" />
     </task>
     <task id="LOCAL-00029" summary="&quot;2016-8-21&quot;">
       <created>1471763165784</created>
@@ -815,11 +821,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475477182856</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="&quot;2016-10-11&quot;">
+      <created>1476187110084</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1476187110085</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="668671000" />
+    <option name="totallyTimeSpent" value="669148000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -834,7 +847,7 @@
     <frame x="54" y="-8" width="1234" height="1040" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36430678" sideWeight="0.48896247" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36371237" sideWeight="0.48896247" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286445" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40025574" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32352942" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -904,7 +917,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="&quot;2016-7-26&quot;" />
     <MESSAGE value="&quot;2016-7-29&quot;" />
     <MESSAGE value="&quot;2016-7-31&quot;" />
     <MESSAGE value="&quot;2016-8-1&quot;" />
@@ -929,7 +941,8 @@
     <MESSAGE value="&quot;2016-9-17&quot;" />
     <MESSAGE value="&quot;2016-9-20&quot;" />
     <MESSAGE value="&quot;2016-10-2&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;2016-10-2&quot;" />
+    <MESSAGE value="&quot;2016-10-11&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;2016-10-11&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -970,7 +983,7 @@
           <option name="timeStamp" value="220" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/leetcode-contest-2/PerfectRectangle.cpp</url>
+          <url>file://$PROJECT_DIR$/contest/leetcode2/PerfectRectangle.cpp</url>
           <line>92</line>
           <option name="timeStamp" value="301" />
         </line-breakpoint>
@@ -1049,37 +1062,37 @@
           <option name="timeStamp" value="370" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/JD/finalAward.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/JD/finalAward.cpp</url>
           <line>92</line>
           <option name="timeStamp" value="387" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/JD/luckNumber.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/JD/luckNumber.cpp</url>
           <line>19</line>
           <option name="timeStamp" value="396" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/JD/luckNumber.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/JD/luckNumber.cpp</url>
           <line>16</line>
           <option name="timeStamp" value="397" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/JD/luckNumber.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/JD/luckNumber.cpp</url>
           <line>22</line>
           <option name="timeStamp" value="398" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/JD/luckNumber.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/JD/luckNumber.cpp</url>
           <line>23</line>
           <option name="timeStamp" value="399" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/JD/luckNumber.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/JD/luckNumber.cpp</url>
           <line>14</line>
           <option name="timeStamp" value="403" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/JD/luckNumber.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/JD/luckNumber.cpp</url>
           <line>13</line>
           <option name="timeStamp" value="404" />
         </line-breakpoint>
@@ -1159,167 +1172,167 @@
           <option name="timeStamp" value="423" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Tencent/grayCode.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/Tencent/grayCode.cpp</url>
           <line>28</line>
           <option name="timeStamp" value="435" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Tencent/grayCode.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/Tencent/grayCode.cpp</url>
           <line>30</line>
           <option name="timeStamp" value="436" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Tencent/grayCode.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/Tencent/grayCode.cpp</url>
           <line>36</line>
           <option name="timeStamp" value="437" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Tencent/grayCode.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/Tencent/grayCode.cpp</url>
           <line>37</line>
           <option name="timeStamp" value="438" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Tencent/grayCode.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/Tencent/grayCode.cpp</url>
           <line>31</line>
           <option name="timeStamp" value="439" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Tencent/grayCode.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/Tencent/grayCode.cpp</url>
           <line>32</line>
           <option name="timeStamp" value="440" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Tencent/grayCode.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/Tencent/grayCode.cpp</url>
           <line>33</line>
           <option name="timeStamp" value="441" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Tencent/grayCode.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/Tencent/grayCode.cpp</url>
           <line>34</line>
           <option name="timeStamp" value="442" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/BaiDu/eatGood.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/BaiDu/eatGood.cpp</url>
           <line>25</line>
           <option name="timeStamp" value="443" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/BaiDu/eatGood.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/BaiDu/eatGood.cpp</url>
           <line>22</line>
           <option name="timeStamp" value="445" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/BaiDu/eatGood.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/BaiDu/eatGood.cpp</url>
           <line>29</line>
           <option name="timeStamp" value="446" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/BaiDu/eatGood.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/BaiDu/eatGood.cpp</url>
           <line>31</line>
           <option name="timeStamp" value="447" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/elegantPoint.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/elegantPoint.cpp</url>
           <line>21</line>
           <option name="timeStamp" value="460" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/elegantPoint.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/elegantPoint.cpp</url>
           <line>22</line>
           <option name="timeStamp" value="462" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/elegantPoint.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/elegantPoint.cpp</url>
           <line>23</line>
           <option name="timeStamp" value="463" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/elegantPoint.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/elegantPoint.cpp</url>
           <line>19</line>
           <option name="timeStamp" value="464" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/elegantPoint.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/elegantPoint.cpp</url>
           <line>17</line>
           <option name="timeStamp" value="466" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/elegantPoint.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/elegantPoint.cpp</url>
           <line>15</line>
           <option name="timeStamp" value="467" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/elegantPoint.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/elegantPoint.cpp</url>
           <line>13</line>
           <option name="timeStamp" value="468" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/elegantPoint.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/elegantPoint.cpp</url>
           <line>12</line>
           <option name="timeStamp" value="470" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/digitNumber.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/digitNumber.cpp</url>
           <line>45</line>
           <option name="timeStamp" value="493" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/digitNumber.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/digitNumber.cpp</url>
           <line>42</line>
           <option name="timeStamp" value="494" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/digitNumber.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/digitNumber.cpp</url>
           <line>48</line>
           <option name="timeStamp" value="495" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/digitNumber.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/digitNumber.cpp</url>
           <line>47</line>
           <option name="timeStamp" value="496" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/digitNumber.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/digitNumber.cpp</url>
           <line>54</line>
           <option name="timeStamp" value="497" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/digitNumber.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/digitNumber.cpp</url>
           <line>53</line>
           <option name="timeStamp" value="499" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/digitNumber.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/digitNumber.cpp</url>
           <line>38</line>
           <option name="timeStamp" value="501" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/digitNumber.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/digitNumber.cpp</url>
           <line>37</line>
           <option name="timeStamp" value="503" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/souceCodeCompile.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/souceCodeCompile.cpp</url>
           <line>101</line>
           <option name="timeStamp" value="509" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/drawLine.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/drawLine.cpp</url>
           <line>114</line>
           <option name="timeStamp" value="511" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/imageProcess.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/imageProcess.cpp</url>
           <line>107</line>
           <option name="timeStamp" value="512" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/eliminateGame.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/eliminateGame.cpp</url>
           <line>122</line>
           <option name="timeStamp" value="514" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NetEase/supernaturalNumber.cpp</url>
+          <url>file://$PROJECT_DIR$/xiaozhao/NetEase/supernaturalNumber.cpp</url>
           <line>108</line>
           <option name="timeStamp" value="515" />
         </line-breakpoint>
@@ -1409,44 +1422,34 @@
           <option name="timeStamp" value="546" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/treeDP/paint2.cpp</url>
+          <url>file://$PROJECT_DIR$/DP/treeDP/paint2.cpp</url>
           <line>51</line>
           <option name="timeStamp" value="547" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/treeDP/wirelessRouters.cpp</url>
+          <url>file://$PROJECT_DIR$/DP/treeDP/wirelessRouters.cpp</url>
           <line>79</line>
           <option name="timeStamp" value="578" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/treeDP/wirelessRouters.cpp</url>
+          <url>file://$PROJECT_DIR$/DP/treeDP/wirelessRouters.cpp</url>
           <line>76</line>
           <option name="timeStamp" value="583" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/xiaozhao/MS/test3.cpp</url>
+          <line>42</line>
+          <option name="timeStamp" value="617" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="617" />
+      <option name="time" value="618" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/newCode/charEncoding.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DP/LCstr.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/MinGW/lib/gcc/mingw32/4.8.1/include/c++/bits/stl_vector.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -1454,14 +1457,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NetEase/scanMurshroom.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/NetEase/scanMurshroom.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NetEase/drawLine.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/NetEase/drawLine.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="591">
           <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
@@ -1476,14 +1479,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DigitDP/supernaturalNumber.cpp">
+    <entry file="file://$PROJECT_DIR$/DP/DigitDP/supernaturalNumber.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NetEase/supernaturalNumber.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/NetEase/supernaturalNumber.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
@@ -1491,7 +1494,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NetEase/souceCodeCompile.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/NetEase/souceCodeCompile.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
@@ -1499,7 +1502,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NetEase/digitNumber.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/NetEase/digitNumber.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-34">
           <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
@@ -1529,14 +1532,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BaiDu/test.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/BaiDu/test.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NetEase/imageProcess.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/NetEase/imageProcess.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
@@ -1544,7 +1547,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NetEase/eliminateGame.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/NetEase/eliminateGame.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="843">
           <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
@@ -1587,17 +1590,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zy2.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/zy2.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test100.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1608,31 +1604,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/splitWOrd.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shuffle_youdao.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/shuffle_youdao.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-143">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WanMei/test2.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/WanMei/test2.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/treeDP/paint.cpp">
+    <entry file="file://$PROJECT_DIR$/DP/treeDP/paint.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="719">
           <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1643,14 +1633,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/treeDP/magicCube.cpp">
+    <entry file="file://$PROJECT_DIR$/DP/treeDP/magicCube.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/treeDP/paint2.cpp">
+    <entry file="file://$PROJECT_DIR$/DP/treeDP/paint2.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
@@ -1679,71 +1670,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cy/test1.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/cy/test1.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NetEase/test5.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/NetEase/test5.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NetEase/test4.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/NetEase/test4.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NetEase/test2.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/NetEase/test2.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NetEase/test1.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/NetEase/test1.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NetEase/test3.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/NetEase/test3.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_2.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test3.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63">
-          <caret line="164" column="29" selection-start-line="164" selection-start-column="29" selection-end-line="164" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test1.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhaoyin.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/zhaoyin.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
@@ -1763,7 +1737,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MS/test1.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/MS/test1.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
@@ -1773,48 +1747,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BinarySearch/fontSize.cpp">
+    <entry file="file://$PROJECT_DIR$/CPlusClass/test1.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-29">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MS/test3.cpp">
+    <entry file="file://$PROJECT_DIR$/newCode/printMatrix.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-          <folding>
-            <element signature="e#135#154#0" expanded="true" />
-            <marker date="1476105874133" expanded="true" signature="475:567" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/treeDP/wirelessRouters.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MS/test2.cpp">
+    <entry file="file://$PROJECT_DIR$/xiaozhao/MS/test2.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="724">
           <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
           <folding>
             <element signature="e#135#154#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DP/treeDP/wirelessRouters.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinarySearch/fontSize.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/splitWord.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test3.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="164" column="29" selection-start-line="164" selection-start-column="29" selection-end-line="164" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_2.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-41">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test100.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-279">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test1.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiaozhao/MS/test3.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="31" column="54" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
+          <folding>
+            <element signature="e#135#154#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -45,7 +45,7 @@ int main() {
         while (index.size() > 0) {
             auto c = index.top();
             c.arrive += 100;
-            auto
+
         }
     }
     return 0;
