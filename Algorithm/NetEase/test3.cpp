@@ -5,7 +5,7 @@
 //
 
 #include <iostream>
-#include<cstdio>
+#include <cstdio>
 #include<tr1/unordered_set>
 
 using namespace std;
@@ -17,7 +17,7 @@ int main(){
     for(int i = 0; i < num; i++){
         cin >> N >> L;
         //scanf("%d%d", &N, &L);
-        for(int j = 0; j < L; j++){
+        for(int j = 0; j < L; j++) {
             scanf("%d", &arr[j]);
         }
         bool flag = true;
@@ -44,7 +44,7 @@ int main(){
                         set1.insert(arr[k]);
                     }
                 }
-                huihe ++;
+                huihe++;
             }
             if(flag){
                 printf("CAN'T DECIDE\n");

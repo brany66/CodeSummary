@@ -6,7 +6,7 @@
 
 #include <iostream>
 #include <cassert>
-
+#include <queue>
 using namespace std;
 template <class T1, typename T2>
 class AB {
@@ -33,15 +33,16 @@ void funb(int *ip) {
     (*ip)--;
 }
 int main() {
-    int i = 5;
-    int *ip = &i;
-    funb(ip);
-    cout << *ip << endl;
-//    AB a1;
-//    a1.add1();
-//    a1.add2();
-//   // assert(a1.a < AB.b);
-//    cout << a1.a << " " ;
-//    //<< AB.b << endl;
+    priority_queue<int> maxHeap;
+    priority_queue<int, vector<int>, greater<int>> minHeap;
+    maxHeap.push(3);
+    maxHeap.push(5);
+    maxHeap.push(7);
+    maxHeap.push(6);
+    maxHeap.push(2);
+    maxHeap.push(1);
+    cout << maxHeap.top() << endl;
+    string s;
+
     return 0;
 }
