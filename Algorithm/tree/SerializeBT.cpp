@@ -94,28 +94,10 @@ TreeNode* deserialize(string data) {
     }
     return root;
 }
-TreeNode* deserialize_1(string data) {
-    if (data == "[]") return NULL;
-    vector<string> da = split(data.substr(1, data.size() - 2), ",");
-    TreeNode *root = new TreeNode(atoi(da[0].c_str()));
-    queue<TreeNode*> q;
-    q.push(root);
-    bool flag = true;
-    for (int i = 1; i < da.size(); i++) {
-        if (da[i] != "#") {
-            TreeNode *node = new TreeNode(atoi(da[i].c_str()));
-            if (flag)
-                q.front()->left = node;
-            else
-                q.front()->right = node;
-        }
-        if (!flag) q.pop();
-        flag = !flag;
-    }
-    return root;
-}
-int main() {
-    unordered_set<string> wordDict;
 
+int main() {
+    string test = "[1,2,3,4,#,5,6,#,7]";
+    TreeNode *root = deserialize(test);
+    cout << serialize(root) << endl;
     return 0;
 }
