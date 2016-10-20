@@ -36,7 +36,6 @@ int main()
         cout << dfs(h, 1, h) << endl;
     }
     vector<int> xx;
-    remove
     list<char> ll;
     return 0;
 }

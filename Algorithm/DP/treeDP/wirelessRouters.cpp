@@ -65,7 +65,7 @@ int main() {
         }
         int t = n / 3 + ((n % 3) != 0 ? 1 : 0);
         if (m >= t) {
-            cout << res << endl;
+            printf("%d\n", res);
         } else {
             int p;
             for (int i = 1; i <= n; i++)
@@ -74,7 +74,7 @@ int main() {
                     break;
                 }
             dfs(p, 0);
-            cout << max(dp[p][m][1], dp[p][m][0]) << endl;
+            printf("%d\n", max(dp[p][m][1], dp[p][m][0]));
         }
     }
     return 0;

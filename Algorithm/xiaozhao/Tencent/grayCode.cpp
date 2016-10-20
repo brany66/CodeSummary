@@ -6,6 +6,8 @@
 
 #include <iostream>
 #include <vector>
+#include <cmath>
+
 using namespace std;
 
 vector<string> getGray(int n) {
@@ -39,11 +41,31 @@ void help(string &str) {
         }
     }
 }
+string num2binary(int bit, int n) {
+    string ret = "";
+    for(int i = n-1; i >= 0; i--){
+        ret += (bit >> i) & 1;
+    }
+    return ret;
+}
+void getGrayCode(int n) {
+    int len = (int)pow(2, n);
+    for (int i = 0 ; i < len; i++) {
+        int bit = ( i >> 1) ^ i;
+        cout << num2binary(bit, n) << endl;
+    }
+
+}
+
 int main() {
-    string str;
-    while (getline(cin, str)) {
-        help(str);
-        cout << str << endl;
+//    string str;
+//    while (getline(cin, str)) {
+//        help(str);
+//        cout << str << endl;
+//    }
+    int n;
+    while (cin >> n) {
+        getGrayCode(n);
     }
     return 0;
 }

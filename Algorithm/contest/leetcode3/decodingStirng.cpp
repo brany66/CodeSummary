@@ -22,8 +22,9 @@ string help(string &s, int &pos) {
         if(cur == '[') {
             string curStr = help(s, ++pos);
             for(; num > 0; num--) res += curStr;
+            num = 0;
         } else if (cur >= '0' && cur <='9') {
-            num = num*10 + cur - '0';
+            num = num * 10 + (cur - '0');
         } else if (cur == ']') {
             return res;
         } else {    // Normal characters
@@ -36,23 +37,8 @@ string decodeString(string s) {
     int pos = 0;
     return help(s, pos);
 }
-int main() {
-    int a=1;
-    int b=3;
-    int c=5;
-    int *p1=&a;
-    int *p2=&b;
-    int *p=&c;
-    *p=*p1*(*p2);
-    printf("%d\n",c);
 
-    int count = 0;
-    int x = 9999;
-    while (x) {
-        ++count;
-        x &=(x-1);
-    }
-    cout << count << endl;
+int main() {
     string str;
     while (getline(cin, str)) {
         cout << decodeString(str) << endl;
